@@ -547,7 +547,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
 
 @section('style')
 
-@section
+@endsection
 @section('script')
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSlhXQ8ixpBW6CLmCJWOIvQXmwzXwlbj4&v=3.exp&sensor=false&libraries=places"></script>
 <script type="text/javascript" src="{{ asset('assets/front/autocomplete.js') }}"></script>
