@@ -39,147 +39,8 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
   <div class="mainwraperab">
     <div class="container">
 
-      <form id="msform">
-  <fieldset>
-    <h2 class="fs-title">Save up to 65% on your move</h2>
-    <!-- <h3 class="fs-subtitle"></h3> -->
-    <input type="text" name="from_location" placeholder="From Location" style="width: 42%" />
-    <input type="text" name="to_location" placeholder="To Location" style="width: 42%" />
-    <input type="button" name="next" class="next action-button" value="Next" style="width: 13%" />
-  </fieldset>
-  <fieldset>
-    <h2 class="fs-title">I would like to move on…</h2>
-
-    <div class="" id="datepicker">
       
-    </div>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
-  </fieldset>
-  <fieldset>
-    <h2 class="fs-title">Select property type</h2>
-    <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
-    <div>
-      <label>
-        <input type="radio" name="test" value="small" checked class="styles-inp">
-        <img src="{{ url('UserImage/house.png') }}" style="width: 200px;">
-        <p>House</p>
-      </label>
-
-      <label>
-        <input type="radio" name="test" value="big" class="styles-inp">
-        <img src="{{ url('UserImage/apartment.png') }}" style="width: 200px;">
-        <p>Apartment</p>
-      </label>
-
-      <label>
-        <input type="radio" name="test" value="big" class="styles-inp">
-        <img src="{{ url('UserImage/business-building.png') }}" style="width: 200px;">
-        <p>Commercial</p>
-      </label>
-  </div>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
-  </fieldset>
-  <fieldset>
-    <h2 class="fs-title">Select property size</h2>
-    <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
-    <div class="">
-         <label>
-          <input type="radio" name="test" value="big" class="styles-inp">
-          <div class="property-size"> STUDIO </div>
-        </label>
-        <label>
-          <input type="radio" name="test" value="big" class="styles-inp">
-          <div class="property-size"> 1 bedroom </div>
-        </label>
-
-        <label>
-          <input type="radio" name="test" value="big" class="styles-inp">
-          <div class="property-size"> 2 bedroom </div>
-        </label>
-
-    </div>
-    <div class="">
-        <label>
-          <input type="radio" name="test" value="big" class="styles-inp">
-          <div class="property-size"> 3 bedroom </div>
-        </label>
-        <label>
-          <input type="radio" name="test" value="big" class="styles-inp">
-          <div class="property-size"> 4 bedroom </div>
-        </label>
-        <label>
-          <input type="radio" name="test" value="big" class="styles-inp">
-          <div class="property-size"> 5+ bedroom </div>
-        </label>
-    </div>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
-  </fieldset>
-  <fieldset>
-    <h2 class="fs-title">Searching for movers in your area…..</h2>
-    <!-- <h3 class="fs-subtitle">3 movers</h3> -->
-    <div class="">
-      <div class="progress" style="position: relative; margin: 100px 0px;">
-          <div class="progress-bar progress-bar-striped indeterminate">
-          </div>
-      </div>
-    </div>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
-  </fieldset>
-  <fieldset>
-    <h2 class="fs-title">Your quote is only a click away</h2>
-    <h3 class="fs-subtitle">3 movers found!</h3>
-      <input type="text" name="name" placeholder="Name" style="width: 32.33%" />
-      <input type="text" name="email" placeholder="Email" style="width: 33.33%" />
-      <input type="text" name="phone" placeholder="Phone" style="width: 33.33%" />
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
-  </fieldset>
-
-  <fieldset>
-    <h2 class="fs-title">Your quote is only a click away</h2>
-    <div class="">
-
-      <label class="container">One
-          <input type="checkbox" checked="checked">
-          <span class="checkmark"></span>
-        </label>
-
-        <label class="container">Two
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-
-        <label class="container">Three
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-
-        <label class="container">Four
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-
-  </div>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <!-- <input type="submit" name="submit" class="submit action-button" value="Submit" /> -->
-    <input type="button" name="next" class="next action-button" value="Next" />
-  </fieldset>
-
-
-  <fieldset>
-    <h2 class="fs-title">Thank you!</h2>
-    <h3 class="fs-subtitle">Your request has been submitted and we look forward to helping you with your move on </h3>
-      <div class="fs-subtitle">
-        Our professional movers will contact you shortly with your quote.
-      </div>
-  </fieldset>
-
-</form>
-      <!-- <div class="mainwidth">
+      <div class="mainwidth">
         <h2>Save up to 65% on your move </h2>
         <div class="irds clearfix">
           <div class="hds-mn">
@@ -256,7 +117,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </section>
@@ -683,6 +544,10 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
 </section> -->
 
 @endsection
+
+@section('style')
+
+@section
 @section('script')
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSlhXQ8ixpBW6CLmCJWOIvQXmwzXwlbj4&v=3.exp&sensor=false&libraries=places"></script>
 <script type="text/javascript" src="{{ asset('assets/front/autocomplete.js') }}"></script>
