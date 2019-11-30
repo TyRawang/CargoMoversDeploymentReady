@@ -40,7 +40,7 @@ We at Cargo Movers help you move your home from one place to the other by taking
 <section class="products-sec-nsd-2">
   <div class="container">
     <div class="servicesdetails clearfix">
-      <div class="im-ns"> <img src="{{ $aboutus->image }}" class="img-responsive"> </div>
+      <div class="im-ns"> <img src="{{ url($aboutus->image) }}" class="img-responsive"> </div>
       {!! $aboutus->description !!} </div>
   </div>
 </section>

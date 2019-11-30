@@ -51,9 +51,12 @@ Barry Tim
       <div class="col-lg-4">
         <h4 class="hdng-title">Cargomovers’s Services</h4>
          <ul class="site_map_items">
-          <li> <a href="{{ url('moving-services') }}"> Moving</a> </li>
-            <li> <a href="{{ url('packing-services') }}"> Packing</a> </li>
-            <li> <a href="{{ url('storage-services') }}"> Storage</a> </li>
+          <?php 
+          $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0')->get();
+          ?>
+          @foreach($subcategory as $v)
+            <li> <a href="{{ route('l',['list'=>$v->parent->slug,'catlist'=>$v->slug])}}"> {{ $v->category_name }}</a> </li>
+            @endforeach
         </ul>
       </div>
       <div class="col-lg-4">

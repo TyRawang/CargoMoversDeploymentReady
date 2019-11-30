@@ -38,7 +38,148 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
 <section class="nbs-main">
   <div class="mainwraperab">
     <div class="container">
-      <div class="mainwidth">
+
+      <form id="msform">
+  <fieldset>
+    <h2 class="fs-title">Save up to 65% on your move</h2>
+    <!-- <h3 class="fs-subtitle"></h3> -->
+    <input type="text" name="from_location" placeholder="From Location" style="width: 42%" />
+    <input type="text" name="to_location" placeholder="To Location" style="width: 42%" />
+    <input type="button" name="next" class="next action-button" value="Next" style="width: 13%" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">I would like to move on…</h2>
+
+    <div class="" id="datepicker">
+      
+    </div>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Select property type</h2>
+    <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
+    <div>
+      <label>
+        <input type="radio" name="test" value="small" checked class="styles-inp">
+        <img src="{{ url('UserImage/house.png') }}" style="width: 200px;">
+        <p>House</p>
+      </label>
+
+      <label>
+        <input type="radio" name="test" value="big" class="styles-inp">
+        <img src="{{ url('UserImage/apartment.png') }}" style="width: 200px;">
+        <p>Apartment</p>
+      </label>
+
+      <label>
+        <input type="radio" name="test" value="big" class="styles-inp">
+        <img src="{{ url('UserImage/business-building.png') }}" style="width: 200px;">
+        <p>Commercial</p>
+      </label>
+  </div>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Select property size</h2>
+    <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
+    <div class="">
+         <label>
+          <input type="radio" name="test" value="big" class="styles-inp">
+          <div class="property-size"> STUDIO </div>
+        </label>
+        <label>
+          <input type="radio" name="test" value="big" class="styles-inp">
+          <div class="property-size"> 1 bedroom </div>
+        </label>
+
+        <label>
+          <input type="radio" name="test" value="big" class="styles-inp">
+          <div class="property-size"> 2 bedroom </div>
+        </label>
+
+    </div>
+    <div class="">
+        <label>
+          <input type="radio" name="test" value="big" class="styles-inp">
+          <div class="property-size"> 3 bedroom </div>
+        </label>
+        <label>
+          <input type="radio" name="test" value="big" class="styles-inp">
+          <div class="property-size"> 4 bedroom </div>
+        </label>
+        <label>
+          <input type="radio" name="test" value="big" class="styles-inp">
+          <div class="property-size"> 5+ bedroom </div>
+        </label>
+    </div>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Searching for movers in your area…..</h2>
+    <!-- <h3 class="fs-subtitle">3 movers</h3> -->
+    <div class="">
+      <div class="progress" style="position: relative; margin: 100px 0px;">
+          <div class="progress-bar progress-bar-striped indeterminate">
+          </div>
+      </div>
+    </div>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Your quote is only a click away</h2>
+    <h3 class="fs-subtitle">3 movers found!</h3>
+      <input type="text" name="name" placeholder="Name" style="width: 32.33%" />
+      <input type="text" name="email" placeholder="Email" style="width: 33.33%" />
+      <input type="text" name="phone" placeholder="Phone" style="width: 33.33%" />
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+
+  <fieldset>
+    <h2 class="fs-title">Your quote is only a click away</h2>
+    <div class="">
+
+      <label class="container">One
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container">Two
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container">Three
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container">Four
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+
+  </div>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <!-- <input type="submit" name="submit" class="submit action-button" value="Submit" /> -->
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+
+
+  <fieldset>
+    <h2 class="fs-title">Thank you!</h2>
+    <h3 class="fs-subtitle">Your request has been submitted and we look forward to helping you with your move on </h3>
+      <div class="fs-subtitle">
+        Our professional movers will contact you shortly with your quote.
+      </div>
+  </fieldset>
+
+</form>
+      <!-- <div class="mainwidth">
         <h2>Save up to 65% on your move </h2>
         <div class="irds clearfix">
           <div class="hds-mn">
@@ -115,7 +256,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -135,14 +276,14 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
         <div class="sec-title ">
           <h2><span>About Us</span></h2>
           <div class="mytextes">
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
-            <ul>
+            <p>Cargo Movers Canada started as a local business and now we are growing as one of the leading moving companies in Calgary. Our mission is to provide our services with professionalism, attention to each and every specific detail, and concern for the safety of our customer’s properties and belongings.</p>
+           <!--  <ul>
               <li>Deliver Environmentally Responsible Client Services</li>
               <li>Provide Employees with an Attractive Working Environment</li>
               <li>Be an Active Community Partner</li>
               <li>Maintain High Ethical Standards</li>
               <li>Drive Continuous Improvement</li>
-            </ul>
+            </ul> -->
           </div>
           <a href="#" class="thm-btn">view our services <i class="fa fa-arrow-right"></i></a> </div>
       </div>
@@ -156,13 +297,15 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       <h2><span> {{ $value->category_name }}</span></h2>
       <p> {{ $value->category_name }}</p>
     </div>
-    <div class="row"> @foreach($homesubcategory as $v)
+    <div class="row"> 
+
+      @foreach($homesubcategory as $v)
       @if($value->id == $v->p_id)
       <div class="col-md-6">
         <div class="welcome-single-services">
-          <div class="img-box"><a href="{{ route('category-list',['list'=>$value->slug,'catlist'=>$v->slug])}}"><img src="{{ $v->image }}" alt=""></a> </div>
+          <div class="img-box"><a href="{{ route('l',['list'=>$value->slug,'catlist'=>$v->slug])}}"><img src="{{ url($v->image) }}" alt=""></a> </div>
           <div class="text-box">
-            <div class="content"> <a href="{{ route('category-list',['list'=>$value->slug,'catlist'=>$v->slug])}}">
+            <div class="content"> <a href="{{ route('l',['list'=>$value->slug,'catlist'=>$v->slug])}}">
               <h3>{{ $v->category_name }}</h3>
               </a>
               <p>{{ $v->shortdescription }}</p>
@@ -194,7 +337,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
 <section class="faq-section sec-padding">
   <div class="thm-container">
     <div class="row">
-      <div class="col-lg-8 col-md-8">
+      <div class="col-lg-12 col-md-12">
         <div class="sec-title">
           <h2><span>some of our core values</span></h2>
         </div>
@@ -255,14 +398,14 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4">
+     <!--  <div class="col-lg-4 col-md-4">
         <div class="sec-title">
           <h2><span>Our locations</span></h2>
         </div>
         <div class="view-location"> <img src="{{ asset('assets/front/images/view-location.png')}}" alt="Awesome Image"/>
           <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non numquam eius modi.</p>
           <a href="#">view our locations</a> </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -276,6 +419,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
           </div>
           <div class="testimonial-box with-carousel">
             <div class="owl-carousel owl-theme">
+              @foreach($home_testimonial as $testi)
               <div class="item">
                 <div class="content-box">
                   <div class="top">
@@ -285,62 +429,11 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
                     </div>
                   </div>
                   <div class="content">
-                    <p>&ldquo;We got the service of Cargo Movers for our moving on Aug 2018. We are extremely happy about their service. Mike and the team did a professional work. They did everything very nicely, efficiently and timely. We will hire them again if want to move. They quoted the minimum of 3 h + 1 h for transport and they did everything within 4+1 h. Thanks Guys!!!&rdquo;</p>
-                    <span> Barry Tim</span> <img src="http://demo.edtech.in/cargomoverscanada/uploads/image/34881.png" alt=""> </div>
+                    <p>{!! $testi->description !!}</p>
+                    <span> {{ $testi->title }}</span> <img src="{{ url('UserImage/default_profile.png') }}" alt=""> </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="content-box">
-                  <div class="top">
-                    <div class="qoute-box"> " </div>
-                    <div class="title">
-                      <h3></h3>
-                    </div>
-                  </div>
-                  <div class="content">
-                    <p>&ldquo;The pick up was very smooth and with ease. Unfortunately, I haven&rsquo;t heard back in regards to when my things will get to the final destination and where exactly the storage is going to be. A little more detailed communication between the movers and the client will be very helpful.&rdquo;</p>
-                    <span> Lisa Storey</span> <img src="http://demo.edtech.in/cargomoverscanada/uploads/image/30762.png" alt=""> </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content-box">
-                  <div class="top">
-                    <div class="qoute-box"> " </div>
-                    <div class="title">
-                      <h3></h3>
-                    </div>
-                  </div>
-                  <div class="content">
-                    <p>&ldquo;I have used Cargo Movers for big office moves. They were professional, affordable, responsive, and friendly. They have been wonderful, and I would not consider using another company ever again. Highly recommend.&rdquo;</p>
-                    <span> Leonardo H</span> <img src="http://demo.edtech.in/cargomoverscanada/uploads/image/27764.png" alt=""> </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content-box">
-                  <div class="top">
-                    <div class="qoute-box"> " </div>
-                    <div class="title">
-                      <h3></h3>
-                    </div>
-                  </div>
-                  <div class="content">
-                    <p>&ldquo;Absolute nightmare. I cannot stress how they do not care even remotely if you have a concern or need information of any kind (even dates, estimates, anything at all) They lost some of my furniture and basically disregarded my follow-up because it was out of the claim range. I do not want a claim. I want to know what happened to the rest of my bed! That was the whole reason I chose to use a mover instead of getting new stuff.&rdquo;</p>
-                    <span> Calvin Steffen</span> <img src="http://demo.edtech.in/cargomoverscanada/uploads/image/13153.png" alt=""> </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content-box">
-                  <div class="top">
-                    <div class="qoute-box"> " </div>
-                    <div class="title">
-                      <h3></h3>
-                    </div>
-                  </div>
-                  <div class="content">
-                    <p>&ldquo;A special thank you to Cargo Movers team for always going above and beyond. Caner and his team go above and beyond, even in difficult situations they maintain a positive attitude and have helped us achieve numerous successful moves over the years. Cargo Movers will always be our first moving &amp; storage company we call to get the job done right and on time. Thanks for all the hard work you have provided to Us. Kendra Santos!&rdquo;</p>
-                    <span> Kendra Santos</span> <img src="http://demo.edtech.in/cargomoverscanada/uploads/image/3121.png" alt=""> </div>
-                </div>
-              </div>
+              @endforeach
             </div>
           </div>
         </div>
@@ -357,8 +450,8 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
             <div class="form-grp full">
               <input type="text" name="email" placeholder="Email*">
             </div>
-            <div class="form-grp-box">
-              <div class="form-grp half">
+            <!-- <div class="form-grp"> -->
+              <!-- <div class="form-grp half">
                 <select class="select-menu" name="selectMenu">
                   <option value="default">Choose Something...</option>
                   <option value="Ware Housing">Ware Housing</option>
@@ -367,11 +460,11 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
                   <option value="Ware Housing">Ware Housing</option>
                   <option value="Ware Housing">Ware Housing</option>
                 </select>
-              </div>
-              <div class="form-grp half">
+              </div> -->
+              <div class="form-grp full">
                 <input type="text" name="subject" placeholder="Subject">
               </div>
-            </div>
+            <!-- </div> -->
             <div class="form-grp">
               <textarea name="message" placeholder="Message"></textarea>
             </div>
@@ -382,7 +475,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     </div>
   </div>
 </section>
-<section class="team-section sec-padding">
+<!-- <section class="team-section sec-padding">
   <div class="thm-container">
     <div class="sec-title">
       <h2><span>our team members</span></h2>
@@ -478,8 +571,8 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       </div>
     </div>
   </div>
-</section>
-<section class="fact-counter sec-padding">
+</section> -->
+<!-- <section class="fact-counter sec-padding">
   <div class="thm-container">
     <div class="row">
       <div class="col-md-3 col-sm-6">
@@ -520,7 +613,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <section class="latest-blog sec-padding">
   <div class="thm-container">
     <div class="sec-title">
@@ -567,7 +660,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     </div>
   </div>
 </section>
-<section>
+<!-- <section>
   <div class="row row-tight">
     <hr>
     <div class="medium-6 small-12 columns"> <span style="font-size: 21px;color:#e00926;font-weight: 700;">Services Offered</span>
@@ -587,7 +680,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       </div>
     </div>
     @endforeach </div>
-</section>
+</section> -->
 
 @endsection
 @section('script')

@@ -47,8 +47,9 @@ class HomeController extends Controller
         $featured = Book::where('featured',1)->where('isActive',1)->get();
         $latest = Book::where('latest',1)->where('isActive',1)->get();
         $latest_news = HomeNews::where('isActive',1)->orderBy('created_at', 'DESC')->take(4)->get();
+        $home_testimonial = HomeClients::where('isActive',1)->orderBy('created_at', 'DESC')->take(6)->get();
 
-        return view('fronts.index',compact('banner','featured','latest','category', 'latest_news'));
+        return view('fronts.index',compact('banner','featured','latest','category', 'latest_news', 'home_testimonial'));
     }
 	
 	   public function aboutus()
@@ -142,43 +143,29 @@ class HomeController extends Controller
     public function listCategory(Request $request)
     {
         $slug = $request->slug;
-
-
         $subslug = $request->slug2;
-       
         $book =array();
         $categoryname = array();
         if($subslug) {
-          
          $categoryid = Category::where('slug',$subslug)->where('isActive',1)->first();
         } else {
          $categoryid = Category::where('slug',$slug)->where('isActive',1)->first();
         }
-         
          $catid =  $categoryid->id;
-          
          $categoryname = $categoryid->category_name;
-		 $subcatname = $categoryid->subcatname;
-		 $image = $categoryid->image;
-		 $description = $categoryid->description;
-		 $shortdescription = $categoryid->shortdescription;
-		 $id = $categoryid->id;
+    		 $subcatname = $categoryid->subcatname;
+    		 $image = $categoryid->image;
+         $description = $categoryid->description;
+    		 $shortdescription = $categoryid->shortdescription;
+    		 $id = $categoryid->id;
 		 
          if($subslug) {
-          $book = Book::where('cat_child',$catid)->where('isActive',1)->paginate(10);
-         
-				
-                    
+          $book = Book::where('cat_child',$catid)->where('isActive',1)->paginate(10);      
          } else {
-
-            
-           
           $book = Book::where('category_id',$catid)->where('isActive',1)->paginate(10);
-		  
-
          }
-		 
-		  $categories = Category::where('p_id',$catid)->Orderby('order_by_cat','ASC')->where('p_id','!=',NULL)->get();
+		
+		    $categories = Category::where('p_id',$catid)->Orderby('order_by_cat','ASC')->where('p_id','!=',NULL)->get();
 		 
         
          return view('fronts.list',compact('book','categoryname','subcatname','description','shortdescription','image','catid','categories'));
@@ -214,25 +201,25 @@ class HomeController extends Controller
         return view('fronts.site_map');
 
       }
-      function services(Request $request){
-        $input = $request->all();
-        return view('fronts.services');
-      }
+      // function services(Request $request){
+      //   $input = $request->all();
+      //   return view('fronts.services');
+      // }
 
-      function moving_services(Request $request){
-        $input = $request->all();
-        return view('fronts.moving-services');
-      } 
+      // function moving_services(Request $request){
+      //   $input = $request->all();
+      //   return view('fronts.moving-services');
+      // } 
 
-      function packing_services(Request $request){
-        $input = $request->all();
-        return view('fronts.packing-services');
-      }
+      // function packing_services(Request $request){
+      //   $input = $request->all();
+      //   return view('fronts.packing-services');
+      // }
 
-      function storage_services(Request $request){
-        $input = $request->all();
-        return view('fronts.storage-services');
-      }
+      // function storage_services(Request $request){
+      //   $input = $request->all();
+      //   return view('fronts.storage-services');
+      // }
 
 
        function contact_save(Request $request){

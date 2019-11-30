@@ -10,7 +10,7 @@
         });
   //FRONT
 Route::get('/','HomeController@index')->name('/');
-Route::get('category-list/{slug}/{slug2?}','HomeController@listCategory')->name('category-list');
+Route::get('l/{slug}/{slug2?}','HomeController@listCategory')->name('l');
 Route::get('details/{slug1}','HomeController@details')->name('details');
 Route::post('search','HomeController@searchResult')->name('search');
 Route::get('my-books','IpController@trackIp')->name('my-books');
@@ -28,10 +28,10 @@ Route::get('/aboutus','HomeController@aboutus')->name('/aboutus');
 Route::get('blog-detail/{slug}','HomeController@BlogDetail')->name('blog-detail');
 
 Route::get('/sitemap','HomeController@sitemap')->name('/sitemap');
-Route::get('services','HomeController@services')->name('/services');
-Route::get('/moving-services','HomeController@moving_services')->name('/moving-services');
-Route::get('/packing-services','HomeController@packing_services')->name('/packing-services');
-Route::get('/storage-services','HomeController@storage_services')->name('/storage-services');
+// Route::get('services','HomeController@services')->name('/services');
+// Route::get('/moving-services','HomeController@moving_services')->name('/moving-services');
+// Route::get('/packing-services','HomeController@packing_services')->name('/packing-services');
+// Route::get('/storage-services','HomeController@storage_services')->name('/storage-services');
 Route::post('contact/save','HomeController@contact_save')->name('/contact/save');
 
 

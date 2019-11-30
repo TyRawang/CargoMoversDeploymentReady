@@ -25,9 +25,9 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
             <h3><span> Services </span></h3>
             </a> </div>
           <ul class="link-list">
-            <li> <a href="{{ url('moving-services') }}"> Moving</a> </li>
-            <li> <a href="{{ url('packing-services') }}"> Packing</a> </li>
-            <li> <a href="{{ url('storage-services') }}"> Storage</a> </li>
+             @foreach($subcategory as $v)
+            <li> <a href="{{ route('l',['list'=>$v->parent->slug,'catlist'=>$v->slug])}}"> {{ $v->category_name }}</a> </li>
+            @endforeach
           </ul>
         </div>
       </div>
@@ -53,7 +53,7 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
             <div class="icon-box"> <i class="fa fa-map-marker"></i> </div>
             <div class="text-box">
               <p><b>Cargo Movers Canada</b> <br>
-                683 10 st SW, Calgary Alberta, Canada</p>
+                683 10 St SW #208, Calgary, AB T2P 5G3, Canada</p>
             </div>
           </li>
           <li>

@@ -44,17 +44,17 @@
             <li class="has-submenu"> <a href="{{ route('/') }}">Home</a> </li>
             <li class="has-submenu"> <a href="{{ route('about',['about'=>'about-us']) }}" > About Us </a> </li>
             @foreach($category as $value)
-            <!-- <li class="has-submenu"><a href="{{ route('category-list',['list'=>$value->slug])}}" class="dropdown-trigger" >{{ $value->category_name }} <i class="menu-toggle fa fa-angle-down"></i></a> @if($subcategory)
+             <li class="has-submenu"><a href="{{ route('l',['list'=>$value->slug])}}" class="dropdown-trigger" >{{ $value->category_name }} <i class="menu-toggle fa fa-angle-down"></i></a> @if($subcategory)
               <ul class="submenu">
                 @foreach($subcategory as $v)
                 @if($value->id == $v->p_id)
-                <li ><a href="{{ route('category-list',['list'=>$value->slug,'catlist'=>$v->slug])}}" >{{ $v->category_name }}</a></li>
+                <li ><a href="{{ route('l',['list'=>$value->slug,'catlist'=>$v->slug])}}" >{{ $v->category_name }}</a></li>
                 @endif
                 @endforeach
               </ul>
-              @endif </li> -->
+              @endif </li>
             @endforeach
-            <li class="has-submenu"> 
+            <!-- <li class="has-submenu"> 
               <a href="{{ url('services') }}"> Services
                   <i class="menu-toggle fa fa-angle-down"></i>
                   <button class="dropdown-expander"><i class="fa fa-bars"></i>
@@ -65,7 +65,7 @@
                     <li><a href="{{ url('packing-services') }}"> Packing</a></li>
                     <li><a href="{{ url('storage-services') }}"> Storage</a></li>
               </ul>
-            </li>
+            </li> -->
             <li class="has-submenu"> <a href="{{ route('/') }}/testimonials">Testimonial</a> </li>
             <li class="has-submenu"> <a href="{{ route('/') }}/faqs">Faq</a> </li>
             <li class="has-submenu"> <a href="{{ route('/') }}/blogs">blog</a> </li>

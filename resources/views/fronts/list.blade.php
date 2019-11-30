@@ -7,6 +7,32 @@ $parentcategories = $exp[4];
 
 $userlogin = Auth::User();
 @endphp
+
+@section('meta')
+<title>Cargo Movers | Moving Services in Vancouver Canada</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v12.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="{!! $shortdescription !!}"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="{{ \Request::fullUrl() }}" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ $categoryname }}" />
+<meta property="og:description" content="{!! $shortdescription !!}" />
+<meta property="og:url" content="{{ \Request::fullUrl() }}" />
+<meta property="og:site_name" content="Cargo Movers Canada " />
+<meta property="article:publisher" content="https://www.facebook.com/CargoMoversCanada" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="{!! $shortdescription !!}" />
+<meta name="twitter:title" content="{{ $categoryname }}" />
+        
+<meta property="og:title" content="Services"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="{{ \Request::fullUrl() }}"/>
+<meta property="og:site_name" content="Cargo Movers Canada "/>
+<meta property="og:description" content="{!! $shortdescription !!}  Read More"/>
+<meta property="og:image" content="{{ url('assets/front/images/logo.png') }}"/>
+@endsection
 @section('content')
 <section class="inner-banner">
   <div class="thm-container">
@@ -25,7 +51,7 @@ $userlogin = Auth::User();
       <p> {!! $shortdescription !!} </p>
     </div>
     <div class="row"> @foreach($categories as $cat)
-      <div class="col-md-3 col-sm-6 ">
+      <div class="col-md-4 col-sm-6 ">
         <div class="mns">
           <div class="rjmd"> <a href="{{ $cat->slug }}"><img src="{{ asset($cat->image) }}" class="img-responsive"> </a></div>
           <div class="heading-pr">
