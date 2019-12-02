@@ -23,8 +23,7 @@
     <meta property="og:description" content="GET IN TOUCH 
 WE&#039;D LOVE TO HEAR FROM YOU 
 Get In Touch 
-683 10 st SW
-Calgary Alberta, Canada
+683 10 St SW #208, Calgary, AB T2P 5G3, Canada
 Phone: (403) 768-0480
 or
 1-855-206-9407
@@ -73,15 +72,15 @@ Send Us A Quick Email"/>
           </p>
           <p>
             <input type="text" placeholder="Email" name="email" value="{{ (old('email')) ? old('email') : '' }}">
-            {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+            {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
           </p>
           <p>
             <input type="text" placeholder="Subject" name="subject" value="{{ (old('subject')) ? old('subject') : '' }}">
-            {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+            {!! $errors->first('subject', '<p class="help-block">:message</p>') !!}
           </p>
           <p>
             <textarea name="message" placeholder="Message"> {{ (old('message')) ? old('message') : '' }}</textarea>
-            {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+            {!! $errors->first('message', '<p class="help-block">:message</p>') !!}
           </p>
           <button type="submit" class="thm-btn">Submit Now <i class="fa fa-arrow-right"></i></button>
         </form>
@@ -95,7 +94,7 @@ Send Us A Quick Email"/>
               <div class="icon-box"> <i class="icon icon-Pointer"></i> </div>
               <div class="content">
                 <p> <strong>Cargo Movers Canada</strong><br>
-                  683 10 st SW, Calgary Alberta, Canada</p>
+                  683 10 St SW #208, Calgary, AB T2P 5G3, Canada</p>
               </div>
             </li>
             <li>

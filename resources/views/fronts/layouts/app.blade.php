@@ -39,6 +39,44 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
 <link rel="stylesheet" href="{{ asset('assets/front/css/responsive.css') }}" media="all" type="text/css" />
 @section('style')
 @show
+
+<style type="text/css">
+
+#calling_btn{
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #calling_btn{
+    display: block;
+  } 
+}
+#calling_btn {
+    position: fixed;
+    bottom: 19px;
+    right: 15px;
+    z-index: 99999;
+    border: none;
+    outline: none;
+    background-color: #880b17;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 9999;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin-top: 13px;
+    border-radius: 50%;
+}
+#calling_btn i{
+	padding-top: 15px;
+    font-size: 24px;
+}
+
+#calling_btn:hover {
+  background-color: #0072bc; /* Add a dark-grey background on hover */
+}
+</style>
 </head>
 <body class=" new-menu vertical-menu">
 

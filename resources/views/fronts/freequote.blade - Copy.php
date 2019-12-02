@@ -64,170 +64,135 @@ We aim to respond to all quote requests within a 24 hour period Monday-Friday. H
     <!-- <h3 class="fs-subtitle"></h3> -->
     <div class="row">
       <div class="col-lg-5 form-group">
-        <div class="radio">Moving From : 
-          <label>
-            <input type="radio" name="moving_from" value="ca" checked="checked">Canada <span></span></label>
-          <label><input type="radio" name="moving_from" value="us" >USA <span></span></label> 
-        </div>
-        <input type="text" name="from_location" id="from_location" class="form-control inn-s" required="">
-        <input type="hidden" name="from_venue_city" id="from_venue_city">
-        <input type="hidden" name="from_venue_postal_code" id="from_venue_postal_code" >
-        <input type="hidden" name="from_venue_state" id="from_venue_state">
-        <input type="hidden" name="from_venue_country" id="from_venue_country" >
+        <label></label>
+        <input type="text" name="" class="form-control">
       </div>
        <div class="col-lg-5 form-group">
-          <div class="radio">Moving To :
-            <label><input type="radio" name="moving_to" value="ca" checked="checked">Canada<span></span></label>
-            <label><input type="radio" name="moving_to" value="us">USA<span></span></label> 
-          </div>
-        <input type="text" name="to_location" id="to_location" class="form-control inn-s" required="">
-        <input type="hidden" name="to_venue_city" id="to_venue_city">
+        <input type="text" name="" class="form-control">
+      </div>
+      <div class="col-lg-2">
+        <button type="button" class="btn btn-danger">Next</button>
+      </div>
+    </div>
+    
+    <input type="text" name="from_location" id="from_location" placeholder="From Location" style="width: 42%" />
+    <input type="hidden" name="from_venue_city" id="from_venue_city">
+    <input type="hidden" name="from_venue_postal_code" id="from_venue_postal_code" >
+    <input type="hidden" name="from_venue_state" id="from_venue_state">
+    <input type="hidden" name="from_venue_country" id="from_venue_country" >
+
+    <input type="text" name="to_location" id="to_location" placeholder="To Location" style="width: 42%" />
+    <input type="hidden" name="to_venue_city" id="to_venue_city">
     <input type="hidden" name="to_venue_postal_code" id="to_venue_postal_code" >
     <input type="hidden" name="to_venue_state" id="to_venue_state">
     <input type="hidden" name="to_venue_country" id="to_venue_country" >
-      </div>
-      <div class="col-lg-2 form-group">
-        <label> &nbsp;</label>
-        <button type="button" class="next btn btn-danger inn-b" style="margin-top: 15px;">Next <i class="fa fa-arrow-right"></i></button>
-      </div>
-    </div>
- 
+
+
+    <input type="button" name="next" class="next action-button" value="Next" style="width: 13%" />
   </fieldset>
   <fieldset>
     <h2 class="fs-title">I would like to move on…</h2>
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <div class="" id="datepicker"></div>
-      </div>
+
+    <div class="" id="datepicker">
+      
     </div>
     <input type="hidden" name="move_date" id="move_date">
-    
-    <!-- <input type="button" name="previous" class="previous btn btn-danger on-top-place" value="Previous" /> -->
-    <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
-     
+    <input type="button" name="previous" class="previous action-button on-top-place" value="Previous" />
+    <!-- <input type="button" name="next" class="next action-button" value="Next" /> -->
   </fieldset>
   <fieldset>
     <h2 class="fs-title">Select property type</h2>
     <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
-   
-
-    <div class="row text-center">  
-      <div class="col-lg-4 col-xs-4">
+    <div>
       <label>
         <input type="radio" name="property_type" value="House"  class="styles-inp property-type-cls ">
-        <img src="{{ url('UserImage/house.png') }}" style="width: 100%; padding:20% 20% 5% 20%;">
+        <img src="{{ url('UserImage/house.png') }}" style="width: 200px;">
         <p>House</p>
       </label>
-    </div>
-    <div class="col-lg-4 col-xs-4">
 
       <label>
         <input type="radio" name="property_type" value="Apartment" class="styles-inp property-type-cls">
-        <img src="{{ url('UserImage/apartment.png') }}" style="width: 100%; padding:20% 20% 5% 20%;">
+        <img src="{{ url('UserImage/apartment.png') }}" style="width: 200px;">
         <p>Apartment</p>
       </label>
-    </div>
-    <div class="col-lg-4 col-xs-4">
+
       <label>
         <input type="radio" name="property_type" value="Commercial" class="styles-inp property-type-cls">
-        <img src="{{ url('UserImage/business-building.png') }}" style="width: 100%; padding:20% 20% 5% 20%;">
+        <img src="{{ url('UserImage/business-building.png') }}" style="width: 200px;">
         <p>Commercial</p>
       </label>
-    </div>
   </div>
-  
-    <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+    <input type="button" name="previous" class="previous action-button on-top-place" value="Previous" />
   </fieldset>
   <fieldset>
     <h2 class="fs-title">Select property size</h2>
     <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
-    <div class="for_house_aprtment_bx text-center">
-        <div class="row">
-          <div class="col-lg-4 col-xs-6">
+    <div class="for_house_aprtment_bx">
+        <div class="">
          <label>
           <input type="radio" name="propery_size" value="STUDIO" class="styles-inp">
           <div class="property-size property-size-cls"> STUDIO </div>
           </label>
-        </div>
-        <div class="col-lg-4 col-xs-6">
           <label>
             <input type="radio" name="propery_size" value="1 bedroom" class="styles-inp">
             <div class="property-size property-size-cls"> 1 bedroom </div>
           </label>
-        </div>
-        <div class="col-lg-4 col-xs-6">
           <label>
             <input type="radio" name="propery_size" value="2 bedrooms" class="styles-inp">
             <div class="property-size property-size-cls"> 2 bedrooms </div>
           </label>
         </div>
-        <div class="col-lg-4 col-xs-6">
+        <div class="">
             <label>
               <input type="radio" name="propery_size" value="3 bedrooms" class="styles-inp">
               <div class="property-size property-size-cls"> 3 bedrooms </div>
             </label>
-          </div>
-          <div class="col-lg-4 col-xs-6">
             <label>
               <input type="radio" name="propery_size" value="4 bedrooms" class="styles-inp">
               <div class="property-size property-size-cls"> 4 bedrooms </div>
             </label>
-          </div>
-          <div class="col-lg-4 col-xs-6">
             <label>
               <input type="radio" name="propery_size" value="5+ bedrooms" class="styles-inp">
               <div class="property-size property-size-cls"> 5+ bedrooms </div>
             </label>
         </div>
-      </div>
     </div>
 
-     <div class="for_business_bx text-center" style="display: none;">
-        <div class="row">
-          <div class="col-lg-4 col-xs-6">
+     <div class="for_business_bx" style="display: none;">
+        <div class="">
          <label>
             <input type="radio" name="propery_size" value="1 room" class="styles-inp">
             <div class="property-size property-size-cls"> 1 room </div>
           </label>
-          </div>
-          <div class="col-lg-4 col-xs-6">
           <label>
             <input type="radio" name="propery_size" value="2 rooms" class="styles-inp">
             <div class="property-size property-size-cls"> 2 rooms </div>
           </label>
-          </div>
-          <div class="col-lg-4 col-xs-6">
            <label>
               <input type="radio" name="propery_size" value="3 rooms" class="styles-inp">
               <div class="property-size property-size-cls"> 3 rooms </div>
             </label>
         </div>
-          <div class="col-lg-4 col-xs-6">
-        
+        <div class="">
            
             <label>
               <input type="radio" name="propery_size" value="4 rooms" class="styles-inp">
               <div class="property-size property-size-cls"> 4 rooms </div>
             </label>
-            </div>
-          <div class="col-lg-4 col-xs-6">
             <label>
               <input type="radio" name="propery_size" value="5 rooms" class="styles-inp">
               <div class="property-size property-size-cls"> 5 rooms </div>
             </label>
-            </div>
-          <div class="col-lg-4 col-xs-6">
 
                 <label>
               <input type="radio" name="propery_size" value="6+ rooms" class="styles-inp">
               <div class="property-size property-size-cls"> 6+ rooms </div>
             </label>
-          </div>
         </div>
 
 
     </div>
-    <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+    <input type="button" name="previous" class="previous action-button on-top-place" value="Previous" />
   </fieldset>
   <fieldset>
     <h2 class="fs-title">Searching for movers in your area…..</h2>
@@ -237,126 +202,374 @@ We aim to respond to all quote requests within a 24 hour period Monday-Friday. H
           </div>
       </div>
     </div>
-    <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+    <input type="button" name="previous" class="previous action-button on-top-place" value="Previous" />
   </fieldset>
   <fieldset>
     <h2 class="fs-title">Your quote is only a click away</h2>
-      <div class="row">
-        <div class="col-lg-3 col-xs-12 form-group">
-          <label>Name</label>
-          <input type="text" name="name" placeholder="Name" class="form-control inn-s" />
-        </div>
-        <div class="col-lg-4 col-xs-12 form-group">
-          <label>Email</label>
-          <input type="text" name="email" placeholder="Email" class="form-control inn-s" />
-        </div>
-        <div class="col-lg-3 col-xs-12 form-group">
-          <label>Phone</label>
-          <input type="text" name="phone" placeholder="Phone" class="form-control inn-s" />
-        </div>
-        <div class="col-lg-2 col-xs-12 form-group">
-          <label> &nbsp;</label>
-          <button name="next" class="user_info_btn btn btn-danger inn-b">
-           Submit <i class="fa fa-arrow-right"></i>
-          </button> 
-        </div>
-      </div>
-   <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+      <input type="text" name="name" placeholder="Name" style="width: 28%" />
+      <input type="text" name="email" placeholder="Email" style="width: 30%" />
+      <input type="text" name="phone" placeholder="Phone" style="width: 30%" />
+      <input type="button" name="next" class="next action-button" value="Submit" style="width: 10%" />
+    <input type="button" name="previous" class="previous action-button on-top-place" value="Previous" />
   </fieldset>
 
   <fieldset>
     <h2 class="fs-title">Your quote is only a click away</h2>
-    <div class="row text-center">
-      <div class="col-xs-6">
-        <label>Do you need storage?</label>
-         <div class="radio form-group">
+    <div class="" style="display: -webkit-box;clear: both;">
+       <div class="" style="width: 50%;">
+        <p>Do you need storage?</p>
+        <div class="radio">
           <label><input type="radio" name="storage" value="Yes"> Yes <span></span></label>
-          <label><input type="radio" name="storage" value="No" checked="checked"> No <span></span></label>
+          <label><input type="radio" name="storage" value="No" checked="checked"> No<span></span></label>
         </div>
-      </div>
-      <div class="col-xs-6">
-        <label>Vehicle Transport?</label>
+        
+        </div>
+
+         <div class="" style="width: 50%;">
+          <p>Vehicle Transport?</p>
         <div class="radio">
           <label><input type="radio" name="transport" value="Yes"> Yes <span></span></label>
-          <label><input type="radio" name="transport" value="No" checked="checked"> No <span></span></label>
+          <label><input type="radio" name="transport" value="No" checked="checked"> No<span></span></label>
+        </div>
+        
         </div>
       </div>
-    </div>
 
-    <div class="row vihcle_transport_box" style="display: none;">
-      <div class="col-xs-12">
-        <div class="row">
-          <div class="col-lg-4 form-group">
+       <div class="vihcle_transport_box" style="display: none;">
+        <div>
+        <div class="" style="width: 100%;display: inline-flex;text-align: center;margin-left: 40px;">
+          <div class="inp-bx">
             <label>Make</label>
-            <input type="text" name="make" id="make" class="form-control" >
-          </div>
-          <div class="col-lg-4 form-group">
+          <input type="text" name="make" id="make" required="" >
+        </div>
+          <div class="inp-bx">
             <label>Model</label>
-            <input type="text" name="model" id="model" class="form-control" >
-          </div>
-          <div class="col-lg-4 form-group">
+          <input type="text" name="model" id="model" required="" >
+        </div>
+          <div class="inp-bx">
             <label>Year</label>
-            <input type="text" name="year" id="year" class="form-control" >
-          </div>
-
-          <div class="col-lg-12 text-center">
-            <label>Is the car in running condition? </label>
-             <div class="form-group radio">
-                <label><input type="radio" name="car_running_cond" value="Yes" checked="checked"> Yes <span></span> </label>
-                <label><input type="radio" name="car_running_cond" value="No"> No <span></span></label>
-              </div>
-          </div>
+          <input type="text" name="year" id="year" required="" >
+        </div>
         </div>
       </div>
-    </div>
 
-      <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
-    <div class="row">
-      <div class="col-lg-12 form-group text-center">
-        <input type="button" name="next" class="btn btn-danger request_submit_btn inn-b" value="GET FREE QUOTES" style="width: 200px;" />
-      </div>
+      <div style="display: -webkit-box;clear: both;">
+        <div class="" style="width: 100%;">
+          <p>Is the car in running condition? </p>
+        <div class="radio">
+          <label><input type="radio" name="car_running_cond" value="Yes" checked="checked"> Yes <span></span></label>
+          <label><input type="radio" name="car_running_cond" value="No"> No<span></span></label>
+        </div>
+        </div>
     </div>
+  </div>
+    <input type="button" name="previous" class="previous action-button on-top-place" value="Previous " />
+    <input type="submit" name="next" class="next action-button" value="GET FREE QUOTES" style="width: 200px;" />
+  </fieldset>
+
+  <fieldset>
+    <h2 class="fs-title">Thank you!</h2>
+    <h3 class="fs-subtitle">Your request has been submitted and we look forward to helping you with your move on </h3>
+      <div class="fs-subtitle">
+        Our professional movers will contact you shortly with your quote.
+      </div>
   </fieldset>
 
   @endif
 </form>
       </div>
+      <!-- <div class="col-md-7 col-sm-6 col-xs-12 pull-left">
+        <form action="include/sendemail.php" class="contact-form contact-page" novalidate="novalidate">
+          <p>
+            <input type="text" placeholder="Name" name="name">
+          </p>
+          <p>
+            <input type="text" placeholder="Email" name="email">
+          </p>
+          <p>
+            <input type="text" placeholder="Subject" name="subject">
+          </p>
+          <p>
+            <textarea name="message" placeholder="Message"></textarea>
+          </p>
+          <button type="submit" class="thm-btn">Submit Now <i class="fa fa-arrow-right"></i></button>
+        </form>
+        <br>
+        <br>
+      </div> -->
     </div>
   </div>
 </section>
 @endsection
 @section('style')
-<link rel="stylesheet" type="text/css" href="{{ url('assets/css/request-frm.css') }}">
+<style type="text/css">
+      /*custom font*/
+    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+    /*basic reset*/
+    * {margin: 0; padding: 0;}
+
+    html {
+      height: 100%;
+      /*Image only BG fallback*/
+      
+      /*background = gradient + image pattern combo*/
+      background: 
+        linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+    }
+
+    body {
+      font-family: montserrat, arial, verdana;
+    }
+    /*form styles*/
+    #msform {
+      margin: 50px auto;
+      text-align: center;
+      position: relative;
+      height: 500px;
+    }
+    #msform fieldset {
+      background: white;
+      border: 0 none;
+      border-radius: 3px;
+      /*box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);*/
+      padding: 20px 30px;
+      box-sizing: border-box;
+      width: 80%;
+      margin: 0 10%;
+      background-color: #0072bc;
+      border-radius: 10px;
+      
+      /*stacking fieldsets above each other*/
+      position: relative;
+    }
+    /*Hide all except first fieldset*/
+    #msform fieldset:not(:first-of-type) {
+      display: none;
+    }
+    /*inputs*/
+    #msform input, #msform textarea {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: montserrat;
+      color: #2C3E50;
+    }
+    /*buttons*/
+    #msform .action-button {
+      width: 100px;
+      background: #880b17;
+      font-weight: bold;
+      color: white;
+      border: 0 none;
+      border-radius: 1px;
+      cursor: pointer;
+      padding: 15px 5px;
+    }
+    #msform .action-button:hover, #msform .action-button:focus {
+      box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+    }
+    /*headings*/
+    .fs-title {
+      text-transform: uppercase;
+      color: #FFF;
+      margin: 20px 0px;
+      font-weight: 600;
+    }
+    .fs-subtitle {
+      font-weight: normal;
+      color: #fff;
+      margin-bottom: 20px;
+
+    }
+    /*progressbar*/
+    #progressbar {
+      margin-bottom: 30px;
+      overflow: hidden;
+      /*CSS counters to number the steps*/
+      counter-reset: step;
+    }
+    #progressbar li {
+      list-style-type: none;
+      color: white;
+      text-transform: uppercase;
+      width: 33.33%;
+      float: left;
+      position: relative;
+    }
+    #progressbar li:before {
+      content: counter(step);
+      counter-increment: step;
+      width: 20px;
+      line-height: 20px;
+      display: block;
+      color: #333;
+      background: white;
+      border-radius: 3px;
+      margin: 0 auto 5px auto;
+    }
+    /*progressbar connectors*/
+    #progressbar li:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: white;
+      position: absolute;
+      left: -50%;
+      top: 9px;
+      z-index: -1; /*put it behind the numbers*/
+    }
+    #progressbar li:first-child:after {
+      /*connector not needed before the first step*/
+      content: none; 
+    }
+    /*marking active/completed steps green*/
+    /*The number of the step and the connector before it = green*/
+    #progressbar li.active:before,  #progressbar li.active:after{
+      background: #27AE60;
+      color: white;
+    }
+    .ui-datepicker-inline{
+      display: inline-block !important;
+    }
+
+
+    #msform .styles-inp[type=radio] { 
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* IMAGE STYLES */
+    #msform .styles-inp[type=radio] + img {
+      cursor: pointer;
+    }
+
+    /* CHECKED STYLES */
+    #msform .styles-inp[type=radio]:checked + img {
+      outline: 2px solid #f00;
+    }
+
+
+    /* IMAGE STYLES */
+    #msform .styles-inp[type=radio] + div.property-size {
+      cursor: pointer;
+    }
+
+    /* CHECKED STYLES */
+    #msform .styles-inp[type=radio]:checked + div.property-size {
+      outline: 2px solid #f00;
+    }
+
+
+    .property-size {
+        border: 1px solid #eeeeee;
+        width: 200px;
+        height: 100px;
+        background: #eeeeee;
+        border-radius: 27px;
+        margin: 10px;
+        color: #000;
+        font-size: 24px;
+        padding-top: 33px;
+    }
+
+    .property-size:hover {
+        border: 1px solid #880b17;
+        width: 200px;
+        height: 100px;
+        background: #880b17;
+        border-radius: 27px;
+        margin: 10px;
+        color: #fff;
+    }
+
+    .progress-bar.indeterminate {
+      position: relative;
+      animation: progress-indeterminate 3s linear infinite;
+    }
+
+    @keyframes progress-indeterminate {
+       from { left: -25%; width: 25%; }
+       to { left: 100%; width: 25%;}
+    }
+
+
+    .on-top-place{
+      position: absolute;
+      top: 5px;
+      left:5px;
+      border-radius: 5px;
+    }
+
+
+    .radio input[type='radio'] {
+  display: none;
+  /*removes original button*/
+}
+
+.radio label:before {
+  /*styles outer circle*/
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 11px;
+    border: 2px solid #880b17;
+    background-color: white;
+}
+
+.radio label {
+  position: relative;
+}
+
+.radio label input[type='radio']:checked+span {
+  /*styles inside circle*/
+    border-radius: 11px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    left: 26px;
+    display: block;
+    background-color: #880b17;
+}
+
+.inp-bx{
+  padding:0px 15px;
+}
+.inp-bx input {
+  padding: 4px !important;
+}
+</style>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 @endsection
 @section('script')
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="{{ url('assets/js/jquery-input-mask-phone-number.min.js') }}"></script>
-
 <script type="text/javascript">
   $(function(){
-    $('#msform input[name="phone"]').usPhoneFormat({
-        format: 'xxx-xxx-xxxx',
-    }); 
 
-    // $('#phone').inputmask('999-999-9999');
     $( "#datepicker" ).datepicker({
       numberOfMonths:2,
-      minDate: 0,
       onSelect: function(dateText, inst) {
         $("#move_date").val(dateText);
         var elem = $('#move_date');
-
-
          next_func(elem);
       }
     });
   })
 //jQuery time
-var current_fs, next_fs, previous_fs; 
-var left, opacity, scale; 
-var animating;
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
 
 $(".next").click(function(){
   next_func(this);
@@ -379,14 +592,8 @@ $('body').on('click','input[name="transport"]', function(){
   var transport = $(this).val();
   if(transport == "Yes"){
     $('.vihcle_transport_box').show();
-    $('#make').attr('required', true);
-    $('#model').attr('required', true);
-    $('#year').attr('required', true);
   }else{
     $('.vihcle_transport_box').hide();
-    $('#make').removeAttr('required');
-    $('#model').removeAttr('required');
-    $('#year').removeAttr('required');
   }
 
 });
@@ -399,91 +606,32 @@ $(".property-size-cls").click(function(){
   }, 3000);
 });
 
-$('body').on('click', '.user_info_btn', function(e){
-    e.preventDefault();
-    var _this = this;
-    var form = $("#msform");
-    form.validate({
-      rules: {
-        name: {
-          required: true,
-        },
-        email: {
-          required: true,
-          email: true,
-        },
-        phone: {
-          required: true,
-          // number: true
-        }
-      },
-      messages: {
-        name: {
-          required: "Enter your name.",
-        },
-        email: {
-          required: "Enter your email.",
-          email: "Enter valid email.",
-        },
-        phone: {
-          required: "Enter your Phone.",
-          number: "Enter valid phone.",
-        },
-      }
-    });
-    if (form.valid() == true){
-      next_func(_this);
-    }
-});
 
-
-$('body').on('click', '.request_submit_btn', function(e){
-  e.preventDefault();
-   var _this = this;
-    var form1 = $("#msform");
-    form1.validate({
-      rules: {
-        make: {
-          required: true,
-        },
-        model: {
-          required: true,
-        },
-        year: {
-          required: true,
-        }
-      },
-      messages: {
-        make: {
-          required: "Enter your make.",
-        },
-        model: {
-          required: "Enter your model.",
-        },
-        year: {
-          required: "Enter your year.",
-        },
-      }
-    });
-    if (form1.valid() == true){
-      $('#msform').submit();
-    }
-
-});
-
+// $('body').on('change', '#move_date', function(e){
+//   console.log($(this).val());
+// })
 
 function next_func(_this){
   if(animating) return false;
   animating = true;
+  
   current_fs = $(_this).closest('fieldset');
   next_fs = $(_this).closest('fieldset').next();
+  
+  //activate next step on progressbar using the index of next_fs
   $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
   
+  //show the next fieldset
   next_fs.show(); 
+  //hide the current fieldset with style
   current_fs.animate({opacity: 0}, {
     step: function(now, mx) {
+      //as the opacity of current_fs reduces to 0 - stored in "now"
+      //1. scale current_fs down to 80%
       scale = 1 - (1 - now) * 0.2;
+      //2. bring next_fs from the right(50%)
       left = (now * 50)+"%";
+      //3. increase opacity of next_fs to 1 as it moves in
       opacity = 1 - now;
       current_fs.css({
         'transform': 'scale('+scale+')',
@@ -496,22 +644,32 @@ function next_func(_this){
       current_fs.hide();
       animating = false;
     }, 
+    //_this comes from the custom easing plugin
     easing: 'easeInOutBack'
   });
 }
 
 $(".previous").click(function(){
   if(animating) return false;
-  animating = true;  
+  animating = true;
+  
   current_fs = $(this).closest('fieldset');
   previous_fs = $(this).closest('fieldset').prev();
-  $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-  previous_fs.show(); 
   
+  //de-activate current step on progressbar
+  $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+  
+  //show the previous fieldset
+  previous_fs.show(); 
+  //hide the current fieldset with style
   current_fs.animate({opacity: 0}, {
     step: function(now, mx) {
+      //as the opacity of current_fs reduces to 0 - stored in "now"
+      //1. scale previous_fs from 80% to 100%
       scale = 0.8 + (1 - now) * 0.2;
+      //2. take current_fs to the right(50%) - from 0%
       left = ((1-now) * 50)+"%";
+      //3. increase opacity of previous_fs to 1 as it moves in
       opacity = 1 - now;
       current_fs.css({'left': left});
       previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
@@ -521,41 +679,25 @@ $(".previous").click(function(){
       current_fs.hide();
       animating = false;
     }, 
+    //this comes from the custom easing plugin
     easing: 'easeInOutBack'
   });
 });
+
+// $(".submit").click(function(){
+//   return false;
+// })
+
 </script>
+
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSlhXQ8ixpBW6CLmCJWOIvQXmwzXwlbj4&v=3.exp&sensor=false&libraries=places"></script>
 <script type="text/javascript" src="{{ asset('assets/front/autocomplete.js') }}"></script>
 <script type="text/javascript">
-  var option = '';
   $(function(){
-
-        var option = $("#from_location").geocomplete({
-            componentRestrictions: {country: "ca"}
+         var option = $("#from_location").geocomplete({
+            types: ['(cities)']
         });
-
-        var option = $("#to_location").geocomplete({
-            componentRestrictions: {country: "ca"}
-        });
-
-        $('body').on('change', 'input[name="moving_from"]', function(){
-          var country = $(this).val();
-          $('#from_location').geocomplete("destroy");
-          var option = $("#from_location").geocomplete({
-              componentRestrictions: {country: country}
-          });
-        });
-
-        $('body').on('change', 'input[name="moving_to"]', function(){
-          var country = $(this).val();
-          $('#to_location').geocomplete("destroy");
-          var option = $("#to_location").geocomplete({
-              componentRestrictions: {country: country}
-          });
-        });
-
-
         option.bind("geocode:result", function (event, result) {
             var location_arr = {};
             for (var i in result.address_components) {
@@ -590,6 +732,10 @@ $(".previous").click(function(){
             $("#from_venue_country").val(location_arr.country);
         });
 
+
+        var option = $("#to_location").geocomplete({
+            types: ['(cities)']
+        });
         option.bind("geocode:result", function (event, result) {
             var location_arr = {};
             for (var i in result.address_components) {
@@ -623,6 +769,28 @@ $(".previous").click(function(){
             $("#to_venue_postal_code").val(location_arr.postal_code);
             $("#to_venue_country").val(location_arr.country);
         });
+
+
+        // $('body').on('submit', '#msform', function(e){
+        //     e.preventDefault();
+        //     $(this).submit();
+        //    //  var dataS = $(this).serialize();
+        //    //  $.ajax({
+        //    //    type: "POST",
+        //    //    url: "{{ url('free-quote/send') }}",
+        //    //    data: dataS +"&_token={{ csrf_token() }}", 
+        //    //    success: function( data ) {
+        //    //       var data = JSON.parse(data);
+        //    //       remove_error();
+        //    //       if(data.status == 1){
+        //    //          //alert(data.message, 'success', true);
+        //    //          //formReset();
+        //    //       }else{
+        //    //          //error_display(data.message);
+        //    //       }
+        //    //    }
+        //    // });
+        // });
     });
 </script>
 @endsection

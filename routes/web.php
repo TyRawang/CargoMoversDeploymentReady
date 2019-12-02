@@ -33,6 +33,7 @@ Route::get('/sitemap','HomeController@sitemap')->name('/sitemap');
 // Route::get('/packing-services','HomeController@packing_services')->name('/packing-services');
 // Route::get('/storage-services','HomeController@storage_services')->name('/storage-services');
 Route::post('contact/save','HomeController@contact_save')->name('/contact/save');
+Route::post('free-quote/send','HomeController@free_quote_send')->name('/free-quote/send');
 
 
 

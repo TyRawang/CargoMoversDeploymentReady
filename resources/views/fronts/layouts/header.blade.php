@@ -18,7 +18,7 @@
           <p class="phone-number">1-855-206-9407</p>
         </div>
       </div>
-      <div class="info-box search-box-wrapper">
+     <!--  <div class="info-box search-box-wrapper">
         <div class="icon-box"> <i class="flaticon-search51"></i> </div>
         <form action="#" class="search-box-holder">
           <div class="search-box">
@@ -28,7 +28,7 @@
             </div>
           </div>
         </form>
-      </div>
+      </div> -->
     </div>
   </div>
 </header>

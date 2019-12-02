@@ -37,88 +37,282 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
 @section('content')
 <section class="nbs-main">
   <div class="mainwraperab">
-    <div class="container">
 
-      
-      <div class="mainwidth">
-        <h2>Save up to 65% on your move </h2>
-        <div class="irds clearfix">
-          <div class="hds-mn">
-            <h5>Quick Contact</h5>
+    <form id="msform" method="post" action="{{ url('free-quote/send') }}">
+
+@if(session()->has('quote_success_message'))
+  <fieldset>
+    <h2 class="fs-title">Thank you!</h2>
+    <h3 class="fs-subtitle">Your request has been submitted and we look forward to helping you with your move on </h3>
+      <div class="fs-subtitle">
+        Our professional movers will contact you shortly with your quote.
+      </div>
+  </fieldset>
+
+
+  @else
+
+  <fieldset>
+    <h2 class="fs-title">Save up to 65% on your move</h2>
+    <!-- <h3 class="fs-subtitle"></h3> -->
+    <div class="row">
+      <div class="col-lg-5 form-group">
+        <div class="radio">Moving From : 
+          <label>
+            <input type="radio" name="moving_from" value="ca" checked="checked">Canada <span></span></label>
+          <label><input type="radio" name="moving_from" value="us" >USA <span></span></label> 
+        </div>
+        <input type="text" name="from_location" id="from_location" class="form-control inn-s" required="">
+        <input type="hidden" name="from_venue_city" id="from_venue_city">
+        <input type="hidden" name="from_venue_postal_code" id="from_venue_postal_code" >
+        <input type="hidden" name="from_venue_state" id="from_venue_state">
+        <input type="hidden" name="from_venue_country" id="from_venue_country" >
+      </div>
+       <div class="col-lg-5 form-group">
+          <div class="radio">Moving To :
+            <label><input type="radio" name="moving_to" value="ca" checked="checked">Canada<span></span></label>
+            <label><input type="radio" name="moving_to" value="us">USA<span></span></label> 
           </div>
-          <div class="irdsinner clearfix">
-            <div class="location-info-bx">
-              <div class="clearfix">
-                <div class="col-md-6" style="padding: 0; margin: 0;">
-                  <div class="lkmn">
-                    <label>Moving From</label>
-                    <input type="text" name="from_location" id="from_location" class="form-control hgh" placeholder="City, Province">
+        <input type="text" name="to_location" id="to_location" class="form-control inn-s" required="">
+        <input type="hidden" name="to_venue_city" id="to_venue_city">
+    <input type="hidden" name="to_venue_postal_code" id="to_venue_postal_code" >
+    <input type="hidden" name="to_venue_state" id="to_venue_state">
+    <input type="hidden" name="to_venue_country" id="to_venue_country" >
+      </div>
+      <div class="col-lg-2 form-group">
+        <label> &nbsp;</label>
+        <button type="button" class="next btn btn-danger inn-b" style="margin-top: 15px;">Next <i class="fa fa-arrow-right"></i></button>
+      </div>
+    </div>
+ 
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">I would like to move on…</h2>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="" id="datepicker"></div>
+      </div>
+    </div>
+    <input type="hidden" name="move_date" id="move_date">
+    
+    <!-- <input type="button" name="previous" class="previous btn btn-danger on-top-place" value="Previous" /> -->
+    <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+     
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Select property type</h2>
+    <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
+   
 
-                    <input type="hidden" name="from_venue_city" id="from_venue_city">
-                    <input type="hidden" name="from_venue_postal_code" id="from_venue_postal_code" >
-                    <input type="hidden" name="from_venue_state" id="from_venue_state">
-                    <input type="hidden" name="from_venue_country" id="from_venue_country" >
-                    <input type="hidden" name="from_geo_lat" id="from_geo_lat" >
-                    <input type="hidden" name="from_geo_lng" id="from_geo_lng">
+    <div class="row text-center">  
+      <div class="col-lg-4 col-xs-4">
+      <label>
+        <input type="radio" name="property_type" value="House"  class="styles-inp property-type-cls ">
+        <img src="{{ url('UserImage/house.png') }}" style="width: 200px; padding:20% 20% 5% 20%;">
+        <p>House</p>
+      </label>
+    </div>
+    <div class="col-lg-4 col-xs-4">
 
+      <label>
+        <input type="radio" name="property_type" value="Apartment" class="styles-inp property-type-cls">
+        <img src="{{ url('UserImage/apartment.png') }}" style="width: 200px; padding:20% 20% 5% 20%;">
+        <p>Apartment</p>
+      </label>
+    </div>
+    <div class="col-lg-4 col-xs-4">
+      <label>
+        <input type="radio" name="property_type" value="Commercial" class="styles-inp property-type-cls">
+        <img src="{{ url('UserImage/business-building.png') }}" style="width: 200px; padding:20% 20% 5% 20%;">
+        <p>Commercial</p>
+      </label>
+    </div>
+  </div>
+  
+    <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Select property size</h2>
+    <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
+    <div class="for_house_aprtment_bx text-center">
+        <div class="row">
+          <div class="col-lg-4 col-xs-6">
+         <label>
+          <input type="radio" name="propery_size" value="STUDIO" class="styles-inp">
+          <div class="property-size property-size-cls"> STUDIO </div>
+          </label>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <label>
+            <input type="radio" name="propery_size" value="1 bedroom" class="styles-inp">
+            <div class="property-size property-size-cls"> 1 bedroom </div>
+          </label>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+          <label>
+            <input type="radio" name="propery_size" value="2 bedrooms" class="styles-inp">
+            <div class="property-size property-size-cls"> 2 bedrooms </div>
+          </label>
+        </div>
+        <div class="col-lg-4 col-xs-6">
+            <label>
+              <input type="radio" name="propery_size" value="3 bedrooms" class="styles-inp">
+              <div class="property-size property-size-cls"> 3 bedrooms </div>
+            </label>
+          </div>
+          <div class="col-lg-4 col-xs-6">
+            <label>
+              <input type="radio" name="propery_size" value="4 bedrooms" class="styles-inp">
+              <div class="property-size property-size-cls"> 4 bedrooms </div>
+            </label>
+          </div>
+          <div class="col-lg-4 col-xs-6">
+            <label>
+              <input type="radio" name="propery_size" value="5+ bedrooms" class="styles-inp">
+              <div class="property-size property-size-cls"> 5+ bedrooms </div>
+            </label>
+        </div>
+      </div>
+    </div>
 
-
-                  </div>
-                </div>
-                <div class="col-md-6" style="padding: 0; margin: 0;">
-                  <div class="lkmn">
-                    <label>Moving To</label>
-                    <input type="email" name="to_location" id="to_location" class="form-control hgh" placeholder="City, Province">
-
-                  <input type="hidden" name="to_venue_city" id="to_venue_city">
-                  <input type="hidden" name="to_venue_postal_code" id="to_venue_postal_code" >
-                  <input type="hidden" name="to_venue_state" id="to_venue_state">
-                  <input type="hidden" name="to_venue_country" id="to_venue_country" >
-                  <input type="hidden" name="to_geo_lat" id="to_geo_lat" >
-                  <input type="hidden" name="to_geo_lng" id="to_geo_lng">
-
-
-
-                  </div>
-                </div>
-              </div>
-              <div class="lkmn subnm">
-               <br>
-               <label>&nbsp;</label>
-                <button type="Button" class="btn jkl location-next-btn">Next</button>
-              </div>
+     <div class="for_business_bx text-center" style="display: none;">
+        <div class="row">
+          <div class="col-lg-4 col-xs-6">
+         <label>
+            <input type="radio" name="propery_size" value="1 room" class="styles-inp">
+            <div class="property-size property-size-cls"> 1 room </div>
+          </label>
+          </div>
+          <div class="col-lg-4 col-xs-6">
+          <label>
+            <input type="radio" name="propery_size" value="2 rooms" class="styles-inp">
+            <div class="property-size property-size-cls"> 2 rooms </div>
+          </label>
+          </div>
+          <div class="col-lg-4 col-xs-6">
+           <label>
+              <input type="radio" name="propery_size" value="3 rooms" class="styles-inp">
+              <div class="property-size property-size-cls"> 3 rooms </div>
+            </label>
+        </div>
+          <div class="col-lg-4 col-xs-6">
+        
+           
+            <label>
+              <input type="radio" name="propery_size" value="4 rooms" class="styles-inp">
+              <div class="property-size property-size-cls"> 4 rooms </div>
+            </label>
             </div>
-            <div class="user-info-bx" style="display: none;">
-              <div class="clearfix">
-                <div class="col-md-3" style="padding: 0; margin: 0;">
-                  <div class="lkmn">
-                    <input type="email" class="form-control hgh" placeholder="Name">
-                  </div>
-                </div>
-                <div class="col-md-3" style="padding: 0; margin: 0;">
-                  <div class="lkmn">
-                    <input type="email" class="form-control hgh" placeholder="Email">
-                  </div>
-                </div>
-                <div class="col-md-3" style="padding: 0; margin: 0;">
-                  <div class="lkmn">
-                    <input type="email" class="form-control hgh" placeholder="Mobile">
-                  </div>
-                </div>
-                <div class="col-md-3" style="padding: 0; margin: 0;">
-                  <div class="lkmn">
-                    <input type="email" class="form-control hgh" placeholder="Message">
-                  </div>
-                </div>
-              </div>
-              <div class="lkmn subnm">
-                <button type="submit" class="btn jkl">Submit</button>
-              </div>
+          <div class="col-lg-4 col-xs-6">
+            <label>
+              <input type="radio" name="propery_size" value="5 rooms" class="styles-inp">
+              <div class="property-size property-size-cls"> 5 rooms </div>
+            </label>
             </div>
+          <div class="col-lg-4 col-xs-6">
+
+                <label>
+              <input type="radio" name="propery_size" value="6+ rooms" class="styles-inp">
+              <div class="property-size property-size-cls"> 6+ rooms </div>
+            </label>
+          </div>
+        </div>
+
+
+    </div>
+    <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Searching for movers in your area…..</h2>
+    <div class="">
+      <div class="progress" style="position: relative; margin: 100px 0px;">
+          <div class="progress-bar progress-bar-striped indeterminate">
+          </div>
+      </div>
+    </div>
+    <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Your quote is only a click away</h2>
+      <div class="row">
+        <div class="col-lg-3 col-xs-12 form-group">
+          <label>Name</label>
+          <input type="text" name="name" placeholder="Name" class="form-control inn-s" />
+        </div>
+        <div class="col-lg-4 col-xs-12 form-group">
+          <label>Email</label>
+          <input type="text" name="email" placeholder="Email" class="form-control inn-s" />
+        </div>
+        <div class="col-lg-3 col-xs-12 form-group">
+          <label>Phone</label>
+          <input type="text" name="phone" placeholder="Phone" class="form-control inn-s" />
+        </div>
+        <div class="col-lg-2 col-xs-12 form-group">
+          <label> &nbsp;</label>
+          <button name="next" class="user_info_btn btn btn-danger inn-b">
+           Submit <i class="fa fa-arrow-right"></i>
+          </button> 
+        </div>
+      </div>
+   <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+  </fieldset>
+
+  <fieldset>
+    <h2 class="fs-title">Your quote is only a click away</h2>
+    <div class="row text-center">
+      <div class="col-xs-6">
+        <label>Do you need storage?</label>
+         <div class="radio form-group">
+          <label><input type="radio" name="storage" value="Yes"> Yes <span></span></label>
+          <label><input type="radio" name="storage" value="No" checked="checked"> No <span></span></label>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <label>Vehicle Transport?</label>
+        <div class="radio">
+          <label><input type="radio" name="transport" value="Yes"> Yes <span></span></label>
+          <label><input type="radio" name="transport" value="No" checked="checked"> No <span></span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row vihcle_transport_box" style="display: none;">
+      <div class="col-xs-12">
+        <div class="row">
+          <div class="col-lg-4 form-group">
+            <label>Make</label>
+            <input type="text" name="make" id="make" class="form-control" >
+          </div>
+          <div class="col-lg-4 form-group">
+            <label>Model</label>
+            <input type="text" name="model" id="model" class="form-control" >
+          </div>
+          <div class="col-lg-4 form-group">
+            <label>Year</label>
+            <input type="text" name="year" id="year" class="form-control" >
+          </div>
+
+          <div class="col-lg-12 text-center">
+            <label>Is the car in running condition? </label>
+             <div class="form-group radio">
+                <label><input type="radio" name="car_running_cond" value="Yes" checked="checked"> Yes <span></span> </label>
+                <label><input type="radio" name="car_running_cond" value="No"> No <span></span></label>
+              </div>
           </div>
         </div>
       </div>
     </div>
+
+      <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+    <div class="row">
+      <div class="col-lg-12 form-group text-center">
+        <input type="button" name="next" class="btn btn-danger request_submit_btn inn-b" value="GET FREE QUOTES" style="width: 200px;" />
+      </div>
+    </div>
+  </fieldset>
+
+  @endif
+</form>
   </div>
 </section>
 <section class="about-info-box sec-padding">
@@ -138,6 +332,9 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
           <h2><span>About Us</span></h2>
           <div class="mytextes">
             <p>Cargo Movers Canada started as a local business and now we are growing as one of the leading moving companies in Calgary. Our mission is to provide our services with professionalism, attention to each and every specific detail, and concern for the safety of our customer’s properties and belongings.</p>
+            <p>
+              At the end of the sentence, you can write : " Cargo movers understands that moving can be hard, expensive and stressful. Thats why we take the initative to ensure you dont experience the negative aspects of relocation. We offer competitive prices and 0% fuel surcharge. We ensure our communication with our customers are clear and done in a timely manner so our customers are confident their move is in good hands. Allowing Cargo Movers to handle your relocation means you dont have to move a muscle. All services are inclusive of the price you are quoted.
+            </p>
            <!--  <ul>
               <li>Deliver Environmentally Responsible Client Services</li>
               <li>Provide Employees with an Attractive Working Environment</li>
@@ -146,7 +343,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
               <li>Drive Continuous Improvement</li>
             </ul> -->
           </div>
-          <a href="#" class="thm-btn">view our services <i class="fa fa-arrow-right"></i></a> </div>
+          <a href="{{ url('l/services') }}" class="thm-btn">view our services <i class="fa fa-arrow-right"></i></a> </div>
       </div>
     </div>
   </div>
@@ -190,7 +387,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
           <h3>We Remove The Headache From Moving <br>
             Move With Ease</h3>
           <p>Our professional services are designed to take care of your goods right from the picking from your home to the next destination where you want to unload the goods. We have a solution for all your residential & commercial needs.</p>
-          <a href="#" class="thm-btn">View services <i class="fa fa-arrow-circle-right"></i></a> </div>
+          <a href="{{ url('l/services') }}" class="thm-btn">View services <i class="fa fa-arrow-circle-right"></i></a> </div>
       </div>
     </div>
   </div>
@@ -302,14 +499,26 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       <div class="col-md-6">
         <div class="sec-padding">
           <div class="sec-title">
-            <h2><span>request a quote</span></h2>
+            <h2><span>GET IN TOUCH</span></h2>
           </div>
-          <form action="http://designarc.biz/demos/logic-cargo/includes/sendemail.php" class="contact-form">
-            <div class="form-grp full">
-              <input type="text" name="name" placeholder="Name">
+
+          <form action="{{ url('contact/save') }}" method="post" class="contact-form">
+            <div class="row">
+              <div class="col-lg-12 form-group">
+                @if(session()->has('success_message'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success_message') }}
+                    </div>
+                @endif                        
+              </div>
             </div>
             <div class="form-grp full">
-              <input type="text" name="email" placeholder="Email*">
+              <input type="text" name="name" placeholder="Name" value="{{ (old('name')) ? old('name') : '' }}">
+              {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+            </div>
+            <div class="form-grp full">
+              <input type="text" name="email" placeholder="Email*" value="{{ (old('email')) ? old('email') : '' }}">
+              {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
             </div>
             <!-- <div class="form-grp"> -->
               <!-- <div class="form-grp half">
@@ -323,11 +532,13 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
                 </select>
               </div> -->
               <div class="form-grp full">
-                <input type="text" name="subject" placeholder="Subject">
+                <input type="text" name="subject" placeholder="Subject" value="{{ (old('subject')) ? old('subject') : '' }}">
+                 {!! $errors->first('subject', '<p class="help-block">:message</p>') !!}
               </div>
             <!-- </div> -->
             <div class="form-grp">
-              <textarea name="message" placeholder="Message"></textarea>
+              <textarea name="message" placeholder="Message">{{ (old('subject')) ? old('subject') : '' }}</textarea>
+               {!! $errors->first('message', '<p class="help-block">:message</p>') !!}
             </div>
             <button type="submit" class="thm-btn">Submit Now <i class="fa fa-arrow-circle-right"></i></button>
           </form>
@@ -483,7 +694,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     <div class="row">
       @foreach($latest_news as $val)
       <div class="col-md-6">
-        <div class="single-blog-post img-cap-effect">
+        <div class="single-blog-post img-cap-effect" style="margin-bottom: 15px;">
           <div class="img-box"> <img src="{{ asset($val->slider_image) }}"/>
             <div class="img-caption">
               <div class="box-holder">
@@ -498,7 +709,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
             <a href="{{ route('blog-detail',['slug'=>$val->slug])}}">
             <h3>{{ $val->title }}</h3>
             </a>
-            <p>{!! $val->shortdescription !!}</p>
+            <p>{!! $val->sort_desc() !!}</p>
             <a href="{{ route('blog-detail',['slug'=>$val->slug])}}" class="thm-btn">Read More <i class="fa fa-arrow-right"></i></a> </div>
         </div>
       </div>
@@ -507,6 +718,26 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     </div>
   </div>
 </section>
+
+
+
+<section class="fact-counter sec-padding">
+  <div class="thm-container">
+    <div class="row">
+      <div class="col-md-4 col-sm-12 text-center">
+          <img src="{{ url('UserImage/company1.png') }}">
+      </div>
+      <div class="col-md-4 col-sm-12 text-center">
+          <img src="{{ url('UserImage/company2.png') }}">
+      </div>
+      <div class="col-md-4 col-sm-12 text-center">
+          <img src="{{ url('UserImage/company3.png') }}">
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="footer-top">
   <div class="thm-container">
     <div class="row">
@@ -521,41 +752,250 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     </div>
   </div>
 </section>
-<!-- <section>
-  <div class="row row-tight">
-    <hr>
-    <div class="medium-6 small-12 columns"> <span style="font-size: 21px;color:#e00926;font-weight: 700;">Services Offered</span>
-      <h2 class="service-title"> Exclusive Partners </h2>
-    </div>
-    <div class="medium-6 columns hide-for-small" style="text-align:right">
-      <p class="cta-tertiary small"> <a href="{{ route('/') }}/partners" title="View the list of solutions">View all <i class="fa fa-long-arrow-right" aria-hidden="true"></i> </a> </p>
-    </div>
-  </div>
-  <div class="row inform_your_decisions"> @foreach($homecategory as $value)
-    <div class="col_custom_5 columns ">
-      <div class="aboutBox">
-        <h3 class="aboutBox-title"><a href="{{ route('category-list',['list'=>$value->slug])}}"  >{{ $value->category_name }}</a></h3>
-        <div class="about-content"><a href="{{ route('category-list',['list'=>$value->slug])}}"  > <img src="{{ asset($value->image) }}"/>
-          <div class="about-icon fa fa-hand-o-right"></div>
-          </a> </div>
-      </div>
-    </div>
-    @endforeach </div>
-</section> -->
-
 @endsection
-
 @section('style')
-
+<link rel="stylesheet" type="text/css" href="{{ url('assets/css/request-frm.css') }}">
+<style type="text/css">
+.mainwraperab{
+  top: 70% !important;
+}
+#msform .radio label input[type='radio']:checked+span {
+    border-radius: 11px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    display: block;
+    background-color: #880b17;
+}
+</style>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 @endsection
 @section('script')
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="{{ url('assets/js/jquery-input-mask-phone-number.min.js') }}"></script>
+<script type="text/javascript">
+  $(function(){
+     $('#msform input[name="phone"]').usPhoneFormat({
+        format: 'xxx-xxx-xxxx',
+    }); 
+    $( "#datepicker" ).datepicker({
+      numberOfMonths:2,
+      minDate: 0,
+      onSelect: function(dateText, inst) {
+        $("#move_date").val(dateText);
+        var elem = $('#move_date');
+
+
+         next_func(elem);
+      }
+    });
+  })
+//jQuery time
+var current_fs, next_fs, previous_fs; 
+var left, opacity, scale; 
+var animating;
+
+$(".next").click(function(){
+  next_func(this);
+});
+
+$(".property-type-cls").click(function(){
+  var property_type = $(this).val();
+  if(property_type == "Commercial"){
+    $('.for_house_aprtment_bx').hide();
+    $('.for_business_bx').show();
+    next_func(this);
+  }else{
+    $('.for_house_aprtment_bx').show();
+    $('.for_business_bx').hide();
+    next_func(this);
+  }
+});
+
+$('body').on('click','input[name="transport"]', function(){
+  var transport = $(this).val();
+  if(transport == "Yes"){
+    $('.vihcle_transport_box').show();
+    $('#make').attr('required', true);
+    $('#model').attr('required', true);
+    $('#year').attr('required', true);
+  }else{
+    $('.vihcle_transport_box').hide();
+    $('#make').removeAttr('required');
+    $('#model').removeAttr('required');
+    $('#year').removeAttr('required');
+  }
+
+});
+
+$(".property-size-cls").click(function(){
+  next_func(this);
+  setTimeout(function(){
+    var elem = $('.progress-bar');
+    next_func(elem);
+  }, 3000);
+});
+
+$('body').on('click', '.user_info_btn', function(e){
+    e.preventDefault();
+    var _this = this;
+    var form = $("#msform");
+    form.validate({
+      rules: {
+        name: {
+          required: true,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+        phone: {
+          required: true,
+          // number: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Enter your name.",
+        },
+        email: {
+          required: "Enter your email.",
+          email: "Enter valid email.",
+        },
+        phone: {
+          required: "Enter your Phone.",
+          number: "Enter valid phone.",
+        },
+      }
+    });
+    if (form.valid() == true){
+      next_func(_this);
+    }
+});
+
+
+$('body').on('click', '.request_submit_btn', function(e){
+  e.preventDefault();
+   var _this = this;
+    var form1 = $("#msform");
+    form1.validate({
+      rules: {
+        make: {
+          required: true,
+        },
+        model: {
+          required: true,
+        },
+        year: {
+          required: true,
+        }
+      },
+      messages: {
+        make: {
+          required: "Enter your make.",
+        },
+        model: {
+          required: "Enter your model.",
+        },
+        year: {
+          required: "Enter your year.",
+        },
+      }
+    });
+    if (form1.valid() == true){
+      $('#msform').submit();
+    }
+
+});
+
+
+function next_func(_this){
+  if(animating) return false;
+  animating = true;
+  current_fs = $(_this).closest('fieldset');
+  next_fs = $(_this).closest('fieldset').next();
+  $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+  
+  next_fs.show(); 
+  current_fs.animate({opacity: 0}, {
+    step: function(now, mx) {
+      scale = 1 - (1 - now) * 0.2;
+      left = (now * 50)+"%";
+      opacity = 1 - now;
+      current_fs.css({
+        'transform': 'scale('+scale+')',
+        'position': 'absolute'
+      });
+      next_fs.css({'left': left, 'opacity': opacity});
+    }, 
+    duration: 800, 
+    complete: function(){
+      current_fs.hide();
+      animating = false;
+    }, 
+    easing: 'easeInOutBack'
+  });
+}
+
+$(".previous").click(function(){
+  if(animating) return false;
+  animating = true;  
+  current_fs = $(this).closest('fieldset');
+  previous_fs = $(this).closest('fieldset').prev();
+  $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+  previous_fs.show(); 
+  
+  current_fs.animate({opacity: 0}, {
+    step: function(now, mx) {
+      scale = 0.8 + (1 - now) * 0.2;
+      left = ((1-now) * 50)+"%";
+      opacity = 1 - now;
+      current_fs.css({'left': left});
+      previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+    }, 
+    duration: 800, 
+    complete: function(){
+      current_fs.hide();
+      animating = false;
+    }, 
+    easing: 'easeInOutBack'
+  });
+});
+</script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSlhXQ8ixpBW6CLmCJWOIvQXmwzXwlbj4&v=3.exp&sensor=false&libraries=places"></script>
 <script type="text/javascript" src="{{ asset('assets/front/autocomplete.js') }}"></script>
 <script type="text/javascript">
+  var option = '';
   $(function(){
-         var option = $("#from_location").geocomplete({
-            types: ['(cities)']
+
+        var option = $("#from_location").geocomplete({
+            componentRestrictions: {country: "ca"}
         });
+
+        var option = $("#to_location").geocomplete({
+            componentRestrictions: {country: "ca"}
+        });
+
+        $('body').on('change', 'input[name="moving_from"]', function(){
+          var country = $(this).val();
+          $('#from_location').geocomplete("destroy");
+          var option = $("#from_location").geocomplete({
+              componentRestrictions: {country: country}
+          });
+        });
+
+        $('body').on('change', 'input[name="moving_to"]', function(){
+          var country = $(this).val();
+          $('#to_location').geocomplete("destroy");
+          var option = $("#to_location").geocomplete({
+              componentRestrictions: {country: country}
+          });
+        });
+
+
         option.bind("geocode:result", function (event, result) {
             var location_arr = {};
             for (var i in result.address_components) {
@@ -588,14 +1028,8 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
             $("#from_venue_state").val(location_arr.administrative_area_level_1);
             $("#from_venue_postal_code").val(location_arr.postal_code);
             $("#from_venue_country").val(location_arr.country);
-            $("#from_geo_lat").val(result.geometry.location.lat());
-            $("#from_geo_lng").val(result.geometry.location.lng());
         });
 
-
-        var option = $("#to_location").geocomplete({
-            types: ['(cities)']
-        });
         option.bind("geocode:result", function (event, result) {
             var location_arr = {};
             for (var i in result.address_components) {
@@ -628,16 +1062,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
             $("#to_venue_state").val(location_arr.administrative_area_level_1);
             $("#to_venue_postal_code").val(location_arr.postal_code);
             $("#to_venue_country").val(location_arr.country);
-            $("#to_geo_lat").val(result.geometry.location.lat());
-            $("#to_geo_lng").val(result.geometry.location.lng());
         });
-
-        $('body').on('click','.location-next-btn', function(e){
-          e.preventDefault();
-          var boxWidth = $(".user-info-bx").width();
-          $('.location-info-bx').hide();
-          $('.user-info-bx').show();
-        })
     });
 </script>
 @endsection

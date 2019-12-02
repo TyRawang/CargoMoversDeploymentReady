@@ -68,7 +68,7 @@ Terran James
             <h3>{{ $val->title }}</h3>
             </a>
             
-            <p>{!! $val->shortdescription !!}</p>
+            <p>{!! $val->sort_desc() !!}</p>
             <a href="{{ route('blog-detail',['slug'=>$val->slug])}}" class="thm-btn">Read More <i class="fa fa-arrow-right"></i></a> </div>
         </div>
         <br>

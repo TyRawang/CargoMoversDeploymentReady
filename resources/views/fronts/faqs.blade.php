@@ -58,7 +58,7 @@ Frequently Asked Questions"/>
             <h4>{{ $val->title }}</h4>
           </div>
           <div class="accrodion-content" >
-            <h3>{{ $val->title }}</h3>
+            <!-- <h3>{{ $val->title }}</h3> -->
             <p>{!! $val->description !!}</p>
           </div>
         </div>
@@ -75,7 +75,7 @@ Frequently Asked Questions"/>
             <h4>{{ $val->title }}</h4>
           </div>
           <div class="accrodion-content" >
-            <h3>{{ $val->title }}</h3>
+            <!-- <h3>{{ $val->title }}</h3> -->
             <p>{!! $val->description !!}</p>
           </div>
         </div>
@@ -92,7 +92,7 @@ Frequently Asked Questions"/>
             <h4>{{ $val->title }}</h4>
           </div>
           <div class="accrodion-content" >
-            <h3>{{ $val->title }}</h3>
+            <!-- <h3>{{ $val->title }}</h3> -->
             <p>{!! $val->description !!}</p>
           </div>
         </div>
@@ -102,4 +102,13 @@ Frequently Asked Questions"/>
     </div>
   </div>
 </section>
+@endsection
+@section('style')
+<style type="text/css">
+  .accrodion-title h4{
+      color: #b11120 !important;
+      font-weight: 700 !important;
+      font-size: 20px !important;
+  }
+</style>
 @endsection

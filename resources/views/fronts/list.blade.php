@@ -39,6 +39,9 @@ $userlogin = Auth::User();
     <h2>{{ $categoryname }}</h2>
     <ul class="breadcumb">
       <li><a href="{{ route('/') }}">Home</a></li>
+      @if($parent_category)
+      <li><a >{{ $parent_category }}</a></li>
+      @endif
       <li><a >{{ $categoryname }}</a></li>
     </ul>
   </div>
@@ -61,8 +64,8 @@ $userlogin = Auth::User();
               {{ $cat->category_name }} 
               @endif</a></h2>
           </div>
-          <p>{{ $cat->shortdescription }}</p>
-          <p><a href="{{ $cat->slug }}">[..]</a></p>
+          <p>{!! $cat->shortdescription !!}</p>
+          <p><a href="{{ $cat->slug }}" class="thm-btn">Read More <i class="fa fa-arrow-right"></i></a></p>
         </div>
       </div>
       @endforeach </div>
@@ -123,4 +126,13 @@ $userlogin = Auth::User();
 @else
 
 @endif
+@endsection
+@section('style')
+<style type="text/css">
+.mns{
+    border: 1px solid #ddd;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+</style>
 @endsection

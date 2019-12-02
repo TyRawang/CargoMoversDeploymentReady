@@ -3,14 +3,14 @@ $category  = App\Category::Orderby('category_name','ASC')->where('p_id','0')->wh
 $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0')->get();
 
 @endphp
-
+<a  id="calling_btn" href="tel:1-855-206-9407" title="1-855-206-9407"><i class="fa fa-phone"></i></a>
 <footer id="footer" class="sec-padding">
   <div class="thm-container">
     <div class="row">
       <div class="col-md-3 col-sm-6 footer-widget">
-        <div class="about-widget"> <a href="#"><img src="{{ asset('assets/front/images/logo.png')}}" alt="Awesome Image"/></a>
+        <div class="about-widget"> <a href="{{ url('/') }}"><img src="{{ asset('assets/front/images/logo.png')}}" alt="Awesome Image"/></a>
           <p>Cargo Movers started as a local business and now we are growing as one of the leading moving companies in Calgary.</p>
-          <a href="#">Read More <i class="fa fa-angle-double-right"></i></a>
+          <a href="{{ url('about/about-us') }}">Read More <i class="fa fa-angle-double-right"></i></a>
           <ul class="social">
             <li><a href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
             <li><a href="" target="_blank"><i class="fa fa-twitter"></i></a></li>

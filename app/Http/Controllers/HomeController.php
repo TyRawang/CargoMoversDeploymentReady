@@ -157,6 +157,7 @@ class HomeController extends Controller
     		 $image = $categoryid->image;
          $description = $categoryid->description;
     		 $shortdescription = $categoryid->shortdescription;
+         $parent_category = ($categoryid->parent) ?$categoryid->parent->category_name :  false;
     		 $id = $categoryid->id;
 		 
          if($subslug) {
@@ -168,7 +169,7 @@ class HomeController extends Controller
 		    $categories = Category::where('p_id',$catid)->Orderby('order_by_cat','ASC')->where('p_id','!=',NULL)->get();
 		 
         
-         return view('fronts.list',compact('book','categoryname','subcatname','description','shortdescription','image','catid','categories'));
+         return view('fronts.list',compact('book','categoryname','subcatname','description','shortdescription','image','catid','categories', 'parent_category'));
     }
     public function details(Request $request)
     {
@@ -222,7 +223,7 @@ class HomeController extends Controller
       // }
 
 
-       function contact_save(Request $request){
+    function contact_save(Request $request){
         $input  = $request->all();
         // $obj = new Inquiry();
         // $response = $obj->addNew($input);
@@ -240,21 +241,45 @@ class HomeController extends Controller
         $v = \Validator::make($input, $rules, $messages);
         $v->setAttributeNames($newnames);
         if ($v->passes()) {
-            // $obj = new Inquiry();
-            // $obj->name = $input['name'];
-            // $obj->email = $input['email'];
-            // $obj->subject = $input['subject'];
-            // $obj->message = $input['message'];
-            // $obj->save();
             $this->sendmail($input);
             $this->sendmailadmin($input);
             $message = "Saved successfully";
-             return redirect()->back()->with('success_message', $message);
+            return redirect()->back()->with('success_message', $message);
         } else {
             return redirect()->back()->withErrors($v)->withInput();
         }
         
         
+    }
+
+    function free_quote_send(Request $request){
+        $input  = $request->all();
+        $json = [];
+        $rules = array(
+            'move_date' => 'required',
+            'property_type' => 'required',
+            'propery_size' => 'required',
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'storage' => 'required',
+            'transport' => 'required',
+            
+        );
+
+        $newnames = array();
+        $messages = array();
+        $v = \Validator::make($input, $rules, $messages);
+        $v->setAttributeNames($newnames);
+        if ($v->passes()) {
+            // $this->sendmail($input);
+            $this->sendfreequotemailadmin($input);
+            $message = "Saved successfully";
+            return redirect()->back()->with('quote_success_message', $message);
+        } else {
+            return redirect()->back()->withErrors($v)->withInput();
+        }
+        return json_encode($json);
     }
 
 
@@ -275,7 +300,16 @@ class HomeController extends Controller
         $mailObj = new MailFunctions();
         $mailObj->auto = true;
         $mailObj->subject = sprintf("Contact us");
-        $mailObj->toEmail = $input['email'];
+        $mailObj->toEmail = "info@cargomoverscanada.com";
         $html = $mailObj->sendmail("emails.contactus_for_admin", ['title' => "Contact us", 'input' => $input]);
+    }
+
+    public function sendfreequotemailadmin($input){
+        $input = \Request::all();
+        $mailObj = new MailFunctions();
+        $mailObj->auto = true;
+        $mailObj->subject = sprintf("Get Free Quote");
+        $mailObj->toEmail = "info@cargomoverscanada.com";
+        $html = $mailObj->sendmail("emails.get_free_quote_for_admin", ['title' => "Contact us", 'input' => $input]);
     }
 }
