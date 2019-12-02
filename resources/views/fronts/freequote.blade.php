@@ -252,7 +252,7 @@ We aim to respond to all quote requests within a 24 hour period Monday-Friday. H
         </div>
         <div class="col-lg-3 col-xs-12 form-group">
           <label>Phone</label>
-          <input type="text" name="phone" placeholder="Phone" class="form-control inn-s" />
+          <input type="text" name="phone" placeholder="xxx-xxx-xxxx" class="form-control inn-s" autocomplete="off" />
         </div>
         <div class="col-lg-2 col-xs-12 form-group">
           <label> &nbsp;</label>

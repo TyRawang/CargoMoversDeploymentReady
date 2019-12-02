@@ -104,7 +104,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
    
 
-    <div class="row text-center">  
+    <div class="row text-center" style="margin: 0px 150px;">  
       <div class="col-lg-4 col-xs-4">
       <label>
         <input type="radio" name="property_type" value="House"  class="styles-inp property-type-cls ">
@@ -134,7 +134,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
   <fieldset>
     <h2 class="fs-title">Select property size</h2>
     <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
-    <div class="for_house_aprtment_bx text-center">
+    <div class="for_house_aprtment_bx text-center" style="margin: 0px 150px;">
         <div class="row">
           <div class="col-lg-4 col-xs-6">
          <label>
@@ -175,7 +175,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       </div>
     </div>
 
-     <div class="for_business_bx text-center" style="display: none;">
+     <div class="for_business_bx text-center" style="display: none; margin: 0px 150px;">
         <div class="row">
           <div class="col-lg-4 col-xs-6">
          <label>
@@ -237,15 +237,15 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       <div class="row">
         <div class="col-lg-3 col-xs-12 form-group">
           <label>Name</label>
-          <input type="text" name="name" placeholder="Name" class="form-control inn-s" />
+          <input type="text" name="name"class="form-control inn-s" placeholder="Name" />
         </div>
         <div class="col-lg-4 col-xs-12 form-group">
           <label>Email</label>
-          <input type="text" name="email" placeholder="Email" class="form-control inn-s" />
+          <input type="text" name="email"  class="form-control inn-s" placeholder="Email" />
         </div>
         <div class="col-lg-3 col-xs-12 form-group">
           <label>Phone</label>
-          <input type="text" name="phone" placeholder="Phone" class="form-control inn-s" />
+          <input type="text" name="phone" class="form-control inn-s" placeholder="xxx-xxx-xxxx" autocomplete="off" />
         </div>
         <div class="col-lg-2 col-xs-12 form-group">
           <label> &nbsp;</label>
