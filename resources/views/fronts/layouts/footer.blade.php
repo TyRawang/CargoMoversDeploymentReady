@@ -19,7 +19,7 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
           </ul>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6 footer-widget">
+      <div class="col-md-3 col-xs-6 footer-widget">
         <div class="pl-30">
           <div class="title"> <a href="{{ url('/services') }}" >
             <h3><span> Services </span></h3>
@@ -31,7 +31,7 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
           </ul>
         </div>
       </div>
-      <div class="col-md-2 col-sm-6 footer-widget">
+      <div class="col-md-2 col-xs-6 footer-widget">
         <div class="title">
           <h3><span>Quick Links</span></h3>
         </div>
@@ -85,7 +85,7 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
       <p>Copyright &copy; 2019 Cargo Movers Canada. All Rights Reserved | <a target="_blank" href="{{ url('sitemap') }}">Site Map</a></p>
     </div>
     <div class="pull-right">
-      <p>Created by: Edtech</p>
+      <p> Powered by <a href="https://webdesigncalgary.net/" target="_blank"> WebDesign Calgary </a></p>
     </div>
   </div>
 </section>

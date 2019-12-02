@@ -655,3 +655,46 @@
 		height: 80vh !important;
 	}
 }
+
+
+
+/*------------------Rahul------------*/
+@media screen and (max-width: 768px) {
+	.header-info{
+		display: none;
+	}
+
+	.mainwraperab h2{
+		font-size:33px;
+	}
+	.mainwraperab{
+		top: 55% !important; 
+	}
+
+	.nav-footer ul.nav > li > a{
+		color:#242424 !important;
+		border:none !important;
+		border-bottom: 1px solid #9a9898 !important;;
+	}
+
+	.nav-holder > .nav-footer ul.nav > li:hover > a{
+		background:#880b17;
+	}
+
+	.about-info-box{
+		background: unset;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.mainwraperab h2{
+		font-size:25px;
+	}
+
+	#msform .radio label{
+		padding-left:0px;
+	}
+}
+
+
+/*------------------Rahul------------*/

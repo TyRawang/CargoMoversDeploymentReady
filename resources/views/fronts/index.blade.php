@@ -759,6 +759,12 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
 .mainwraperab{
   top: 70% !important;
 }
+
+@media screen and (max-width: 768px){
+  .mainwraperab{
+    top: 55% !important;
+  }
+}
 #msform .radio label input[type='radio']:checked+span {
     border-radius: 11px;
     width: 10px;
@@ -769,12 +775,20 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     display: block;
     background-color: #880b17;
 }
+
+@media screen and (max-width: 425px){
+  #msform .radio label input[type='radio']:checked+span {
+    left: 5px;
+  }
+}
+
+  
+
 </style>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 @endsection
 @section('script')
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.js" type="text/javascript"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="{{ url('assets/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 <script src="{{ url('assets/js/jquery-input-mask-phone-number.min.js') }}"></script>
 <script type="text/javascript">
   $(function(){

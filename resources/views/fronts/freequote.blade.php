@@ -328,6 +328,24 @@ We aim to respond to all quote requests within a 24 hour period Monday-Friday. H
 @section('style')
 <link rel="stylesheet" type="text/css" href="{{ url('assets/css/request-frm.css') }}">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style type="text/css">
+  #msform .radio label input[type='radio']:checked+span {
+    border-radius: 11px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    display: block;
+    background-color: #880b17;
+}
+
+@media screen and (max-width: 425px){
+  #msform .radio label input[type='radio']:checked+span {
+    left: 5px;
+  }
+}
+</style>
 @endsection
 @section('script')
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.js" type="text/javascript"></script>
