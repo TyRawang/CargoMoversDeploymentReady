@@ -12,10 +12,10 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
           <p>Cargo Movers started as a local business and now we are growing as one of the leading moving companies in Calgary.</p>
           <a href="{{ url('about/about-us') }}">Read More <i class="fa fa-angle-double-right"></i></a>
           <ul class="social">
-            <li><a href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/CargoMoversCanada/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/cargomoverscanada/" target="_blank"><i class="fa fa-instagram"></i></a></li>
             <li><a href="" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="mailto:info@cargomoverscanada.com" target="_blank"><i class="fa fa-mail"></i></a></li>
           </ul>
         </div>
       </div>

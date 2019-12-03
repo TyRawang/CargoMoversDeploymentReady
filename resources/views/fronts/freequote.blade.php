@@ -111,7 +111,7 @@ We aim to respond to all quote requests within a 24 hour period Monday-Friday. H
     <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
    
 
-    <div class="row text-center">  
+    <div class="row text-center property-bx">  
       <div class="col-lg-4 col-xs-4">
       <label>
         <input type="radio" name="property_type" value="House"  class="styles-inp property-type-cls ">
@@ -286,15 +286,15 @@ We aim to respond to all quote requests within a 24 hour period Monday-Friday. H
     <div class="row vihcle_transport_box" style="display: none;">
       <div class="col-xs-12">
         <div class="row">
-          <div class="col-lg-4 form-group">
+          <div class="col-lg-4 col-xs-4 form-group">
             <label>Make</label>
             <input type="text" name="make" id="make" class="form-control" >
           </div>
-          <div class="col-lg-4 form-group">
+          <div class="col-lg-4 col-xs-4 form-group">
             <label>Model</label>
             <input type="text" name="model" id="model" class="form-control" >
           </div>
-          <div class="col-lg-4 form-group">
+          <div class="col-lg-4 col-xs-4 form-group">
             <label>Year</label>
             <input type="text" name="year" id="year" class="form-control" >
           </div>
@@ -327,7 +327,7 @@ We aim to respond to all quote requests within a 24 hour period Monday-Friday. H
 @endsection
 @section('style')
 <link rel="stylesheet" type="text/css" href="{{ url('assets/css/request-frm.css') }}">
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="{{ url('assets/css/jquery-ui.min.css') }}">
 <style type="text/css">
   #msform .radio label input[type='radio']:checked+span {
     border-radius: 11px;
@@ -348,12 +348,27 @@ We aim to respond to all quote requests within a 24 hour period Monday-Friday. H
 </style>
 @endsection
 @section('script')
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.js" type="text/javascript"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="{{ url('assets/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 <script src="{{ url('assets/js/jquery-input-mask-phone-number.min.js') }}"></script>
 
 <script type="text/javascript">
   $(function(){
+
+     if($(window).width() <= 800){
+       $( "#datepicker" ).datepicker('destroy');
+       $( "#datepicker" ).datepicker({
+          minDate: 0,
+          onSelect: function(dateText, inst) {
+            $("#move_date").val(dateText);
+            var elem = $('#move_date');
+             next_func(elem);
+          }
+        });
+     }
+        
+
+
+
     $('#msform input[name="phone"]').usPhoneFormat({
         format: 'xxx-xxx-xxxx',
     }); 

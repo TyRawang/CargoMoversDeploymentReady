@@ -104,15 +104,15 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
    
 
-    <div class="row text-center" style="margin: 0px 150px;">  
-      <div class="col-lg-4 col-xs-4">
+    <div class="row text-center property-bx" style="margin: 0px 150px;">  
+      <div class="col-lg-4 col-xs-12">
       <label>
         <input type="radio" name="property_type" value="House"  class="styles-inp property-type-cls ">
         <img src="{{ url('UserImage/house.png') }}" style="width: 200px; padding:20% 20% 5% 20%;">
         <p>House</p>
       </label>
     </div>
-    <div class="col-lg-4 col-xs-4">
+    <div class="col-lg-4 col-xs-12">
 
       <label>
         <input type="radio" name="property_type" value="Apartment" class="styles-inp property-type-cls">
@@ -120,7 +120,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
         <p>Apartment</p>
       </label>
     </div>
-    <div class="col-lg-4 col-xs-4">
+    <div class="col-lg-4 col-xs-12">
       <label>
         <input type="radio" name="property_type" value="Commercial" class="styles-inp property-type-cls">
         <img src="{{ url('UserImage/business-building.png') }}" style="width: 200px; padding:20% 20% 5% 20%;">
@@ -134,7 +134,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
   <fieldset>
     <h2 class="fs-title">Select property size</h2>
     <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
-    <div class="for_house_aprtment_bx text-center" style="margin: 0px 150px;">
+    <div class="for_house_aprtment_bx text-center property-bx" style="margin: 0px 150px;">
         <div class="row">
           <div class="col-lg-4 col-xs-6">
          <label>
@@ -276,18 +276,18 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       </div>
     </div>
 
-    <div class="row vihcle_transport_box" style="display: none;">
-      <div class="col-xs-12">
+    <div class="vihcle_transport_box" style="display: none;">
+      <div>
         <div class="row">
-          <div class="col-lg-4 form-group">
+          <div class="col-lg-4 col-xs-4 form-group">
             <label>Make</label>
             <input type="text" name="make" id="make" class="form-control" >
           </div>
-          <div class="col-lg-4 form-group">
+          <div class="col-lg-4 col-xs-4 form-group">
             <label>Model</label>
             <input type="text" name="model" id="model" class="form-control" >
           </div>
-          <div class="col-lg-4 form-group">
+          <div class="col-lg-4 col-xs-4 form-group">
             <label>Year</label>
             <input type="text" name="year" id="year" class="form-control" >
           </div>
@@ -781,17 +781,26 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     left: 5px;
   }
 }
-
-  
-
 </style>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="{{ url('assets/css/jquery-ui.min.css') }}">
 @endsection
 @section('script')
 <script src="{{ url('assets/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 <script src="{{ url('assets/js/jquery-input-mask-phone-number.min.js') }}"></script>
 <script type="text/javascript">
   $(function(){
+    if($(window).width() <= 800){
+       $( "#datepicker" ).datepicker('destroy');
+       $( "#datepicker" ).datepicker({
+          minDate: 0,
+          onSelect: function(dateText, inst) {
+            $("#move_date").val(dateText);
+            var elem = $('#move_date');
+             next_func(elem);
+          }
+        });
+    }
+
      $('#msform input[name="phone"]').usPhoneFormat({
         format: 'xxx-xxx-xxxx',
     }); 
