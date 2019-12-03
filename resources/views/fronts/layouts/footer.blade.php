@@ -14,8 +14,8 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
           <ul class="social">
             <li><a href="https://www.facebook.com/CargoMoversCanada/" target="_blank"><i class="fa fa-facebook"></i></a></li>
             <li><a href="https://www.instagram.com/cargomoverscanada/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="mailto:info@cargomoverscanada.com" target="_blank"><i class="fa fa-mail"></i></a></li>
+            <!-- <li><a href="" target="_blank"><i class="fa fa-google-plus"></i></a></li> -->
+            <li><a href="mailto:info@cargomoverscanada.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
           </ul>
         </div>
       </div>
