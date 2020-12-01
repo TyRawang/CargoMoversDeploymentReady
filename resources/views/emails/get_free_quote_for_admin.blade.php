@@ -21,47 +21,61 @@
       <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['email'] }}</td>
     </tr>
 
-    <tr>
-      <td style="border: 1px solid #DDD;padding: 10px;">Moving From Country</td> 
-      <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['from_venue_country'] }}</td>
-    </tr>
+	@if($input['from_venue_country'] == "" && $input['from_venue_city'] == "")
+		<tr>
+		  <td style="border: 1px solid #DDD;padding: 10px;">Moving From Address</td> 
+		  <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['from_location'] }}</td>
+		</tr>		
+	@else
+		<tr>
+		  <td style="border: 1px solid #DDD;padding: 10px;">Moving From Country</td> 
+		  <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['from_venue_country'] }}</td>
+		</tr>
 
-    <tr>
-      <td style="border: 1px solid #DDD;padding: 10px;"> Moving From State</td> 
-      <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['from_venue_state'] }}</td>
-    </tr>
+		<tr>
+		  <td style="border: 1px solid #DDD;padding: 10px;"> Moving From State</td> 
+		  <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['from_venue_state'] }}</td>
+		</tr>
 
-    <tr>
-      <td style="border: 1px solid #DDD;padding: 10px;">Moving From City</td> 
-      <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['from_venue_city'] }}</td>
-    </tr>
+		<tr>
+		  <td style="border: 1px solid #DDD;padding: 10px;">Moving From City</td> 
+		  <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['from_venue_city'] }}</td>
+		</tr>
 
-    <tr>
-      <td style="border: 1px solid #DDD;padding: 10px;">Moving From Zip</td> 
-      <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['from_venue_postal_code'] }}</td>
-    </tr>
+		<tr>
+		  <td style="border: 1px solid #DDD;padding: 10px;">Moving From Zip</td> 
+		  <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['from_venue_postal_code'] }}</td>
+		</tr>		
+	@endif
 
 
+	@if($input['to_venue_country'] == "" && $input['to_venue_city'] == "")
+		<tr>
+		  <td style="border: 1px solid #DDD;padding: 10px;">Moving To Address</td> 
+		  <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['to_location'] }}</td>
+		</tr>		
+	@else
+		<tr>
+		  <td style="border: 1px solid #DDD;padding: 10px;">Moving To Country</td> 
+		  <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['to_venue_country'] }}</td>
+		</tr>
 
-    <tr>
-      <td style="border: 1px solid #DDD;padding: 10px;">Moving To Country</td> 
-      <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['to_venue_country'] }}</td>
-    </tr>
+		<tr>
+		  <td style="border: 1px solid #DDD;padding: 10px;"> Moving To State</td> 
+		  <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['to_venue_state'] }}</td>
+		</tr>
 
-    <tr>
-      <td style="border: 1px solid #DDD;padding: 10px;"> Moving To State</td> 
-      <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['to_venue_state'] }}</td>
-    </tr>
+		<tr>
+		  <td style="border: 1px solid #DDD;padding: 10px;">Moving To City</td> 
+		  <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['to_venue_city'] }}</td>
+		</tr>
 
-    <tr>
-      <td style="border: 1px solid #DDD;padding: 10px;">Moving To City</td> 
-      <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['to_venue_city'] }}</td>
-    </tr>
+		<tr>
+		  <td style="border: 1px solid #DDD;padding: 10px;">Moving To Zip</td> 
+		  <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['to_venue_postal_code'] }}</td>
+		</tr>		
+	@endif
 
-    <tr>
-      <td style="border: 1px solid #DDD;padding: 10px;">Moving To Zip</td> 
-      <td style="border: 1px solid #DDD;padding: 10px;">{{ $input['to_venue_postal_code'] }}</td>
-    </tr>
 
     <tr>
       <td style="border: 1px solid #DDD;padding: 10px;"> Move Date</td> 

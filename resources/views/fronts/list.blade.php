@@ -14,7 +14,33 @@ $userlogin = Auth::User();
 <!-- This site is optimized with the Yoast SEO plugin v12.4 - https://yoast.com/wordpress/plugins/seo/ -->
 <meta name="description" content="{!! $shortdescription !!}"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
-<link rel="canonical" href="{{ \Request::fullUrl() }}" />
+
+<?php
+if(strtolower($currentURL)=='https://cargomoverscanada.com/l/moving' || strtolower($currentURL)=='https://cargomoverscanada.com/l/services/moving'){
+	$alt = "Long distance movers Calgary";
+	?>
+    <link rel="canonical" href="https://cargomoverscanada.com/l/services/moving" />
+    <?php
+}
+elseif(strtolower($currentURL)=='https://cargomoverscanada.com/l/packing' || strtolower($currentURL)=='https://cargomoverscanada.com/l/services/packing'){
+	$alt = "home packing services Calgary";
+	?>
+    <link rel="canonical" href="https://cargomoverscanada.com/l/services/packing" />
+    <?php
+}
+elseif(strtolower($currentURL)=='https://cargomoverscanada.com/l/storage' || strtolower($currentURL)=='https://cargomoverscanada.com/l/services/packing'){
+	$alt = "";
+	?>
+    <link rel="canonical" href="https://cargomoverscanada.com/l/services/storage" />
+    <?php
+}
+else{
+	$alt = "";
+	?>
+    <link rel="canonical" href="{{ \Request::fullUrl() }}" />
+    <?php
+}
+?>
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{ $categoryname }}" />
@@ -77,7 +103,7 @@ $userlogin = Auth::User();
 <section class="products-sec-nsd-2">
   <div class="container">
     <div class="servicesdetails clearfix">
-      <div class="im-ns"> <img src="{{ asset( $image  )}}" class="img-responsive"> </div>
+      <div class="im-ns"> <img alt="<?php echo $alt; ?>" src="{{ asset( $image  )}}" class="img-responsive"> </div>
       <h1><span>{{ $subcatname }}</span></h1>
       {!! $description !!} </div>
   </div>

@@ -65,7 +65,7 @@ Send Us A Quick Email"/>
     <div class="row">
       <div class="col-md-7 col-sm-6 col-xs-12 pull-left">
         <!-- class="contact-form contact-page"  -->
-           <form class="contact-form contact-page" action="{{ url('contact/save') }}" role="form" method="post" novalidate="novalidate">
+           <form class="contact-form contact-page" action="{{ url('contact/save') }}" role="form" method="post" id="contact_form" novalidate="novalidate">
           <p>
             <input type="text" placeholder="Name" name="name" value="{{ (old('name')) ? old('name') : '' }}">
             {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
@@ -82,6 +82,11 @@ Send Us A Quick Email"/>
             <textarea name="message" placeholder="Message"> {{ (old('message')) ? old('message') : '' }}</textarea>
             {!! $errors->first('message', '<p class="help-block">:message</p>') !!}
           </p>
+          <p>
+            <div id="gogle-recaptch"></div>
+            <div class="recaptcha-error"></div>
+          </p>
+
           <button type="submit" class="thm-btn">Submit Now <i class="fa fa-arrow-right"></i></button>
         </form>
         <br>
@@ -124,10 +129,37 @@ Send Us A Quick Email"/>
   </div>
 </section>
 @endsection
+
+@section('script')
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+ <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('gogle-recaptch', {
+          'sitekey' : '6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz'
+        });
+      };
+
+
+      document.getElementById("contact_form").addEventListener("submit",function(evt){
+          var response = grecaptcha.getResponse();
+          if(response.length == 0){
+            $('#contact_form').find('.recaptcha-error').text("please verify you are humann!"); 
+            evt.preventDefault();
+            return false;
+          }
+      });
+    </script>
+@endsection
+
 @section('style')
 <style type="text/css">
   .help-block{
     color: red;
+  }
+  .recaptcha-error{
+    color: red; 
   }
 </style>
 @endsection

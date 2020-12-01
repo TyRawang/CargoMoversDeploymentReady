@@ -38,7 +38,7 @@
 @section('content')
 <section class="inner-banner">
   <div class="thm-container">
-    <h2>{{ $newsdetail->title ?? ''}}</h2>
+    <h1>{{ $newsdetail->title ?? ''}}</h1>
     <ul class="breadcumb">
       <li><a href="{{ route('/') }}">Home</a></li>
       <li><a href="{{ route('/blogs') }}" >Blogs</a></li>

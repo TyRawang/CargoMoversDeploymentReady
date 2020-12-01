@@ -104,15 +104,15 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
    
 
-    <div class="row text-center" style="margin: 0px 150px;">  
-      <div class="col-lg-4 col-xs-4">
+    <div class="row text-center property-bx" style="margin: 0px 150px;">  
+      <div class="col-lg-4 col-xs-12">
       <label>
         <input type="radio" name="property_type" value="House"  class="styles-inp property-type-cls ">
         <img src="{{ url('UserImage/house.png') }}" style="width: 200px; padding:20% 20% 5% 20%;">
         <p>House</p>
       </label>
     </div>
-    <div class="col-lg-4 col-xs-4">
+    <div class="col-lg-4 col-xs-12">
 
       <label>
         <input type="radio" name="property_type" value="Apartment" class="styles-inp property-type-cls">
@@ -120,7 +120,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
         <p>Apartment</p>
       </label>
     </div>
-    <div class="col-lg-4 col-xs-4">
+    <div class="col-lg-4 col-xs-12">
       <label>
         <input type="radio" name="property_type" value="Commercial" class="styles-inp property-type-cls">
         <img src="{{ url('UserImage/business-building.png') }}" style="width: 200px; padding:20% 20% 5% 20%;">
@@ -134,7 +134,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
   <fieldset>
     <h2 class="fs-title">Select property size</h2>
     <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
-    <div class="for_house_aprtment_bx text-center" style="margin: 0px 150px;">
+    <div class="for_house_aprtment_bx text-center property-bx" style="margin: 0px 150px;">
         <div class="row">
           <div class="col-lg-4 col-xs-6">
          <label>
@@ -276,18 +276,18 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       </div>
     </div>
 
-    <div class="row vihcle_transport_box" style="display: none;">
-      <div class="col-xs-12">
+    <div class="vihcle_transport_box" style="display: none;">
+      <div>
         <div class="row">
-          <div class="col-lg-4 form-group">
+          <div class="col-lg-4 col-xs-4 form-group">
             <label>Make</label>
             <input type="text" name="make" id="make" class="form-control" >
           </div>
-          <div class="col-lg-4 form-group">
+          <div class="col-lg-4 col-xs-4 form-group">
             <label>Model</label>
             <input type="text" name="model" id="model" class="form-control" >
           </div>
-          <div class="col-lg-4 form-group">
+          <div class="col-lg-4 col-xs-4 form-group">
             <label>Year</label>
             <input type="text" name="year" id="year" class="form-control" >
           </div>
@@ -302,10 +302,18 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
         </div>
       </div>
     </div>
-
-      <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+    <button type="button" name="previous" class="previous btn btn-danger on-top-place"><i class="fa fa-arrow-left"></i> Previous </button>
+      <div class="row">
+        <div class="col-md-4"></div>
+       <div class="col-md-4">
+          <div class="g-recaptcha-contact" data-sitekey="6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz" id="RecaptchaField"></div>
+          <input type="hidden" class="hiddenRecaptcha" name="hiddenRecaptcha" id="hiddenRecaptcha">
+           <div class="recaptcha-error"></div>
+       </div>
+    </div>
     <div class="row">
       <div class="col-lg-12 form-group text-center">
+        <br>
         <input type="button" name="next" class="btn btn-danger request_submit_btn inn-b" value="GET FREE QUOTES" style="width: 200px;" />
       </div>
     </div>
@@ -316,11 +324,12 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
   </div>
 </section>
 <section class="about-info-box sec-padding">
+<h1 class="sec-title h2 text-center" style="font-weight: bold;text-transform: uppercase;font-family: 'Alegreya', sans-serif">Edmonton’s Trusted Moving Company</h1>
   <div class="thm-container">
     <div class="row">
       <div class="col-lg-4 hidden-md hidden-sm hidden-xs">
         <div class="img-cap-effect">
-          <div class="img-box"> <img src="http://demo.edtech.in/cargomoverscanada/uploads/cms/18352.jpg" alt="About Us"/>
+          <div class="img-box"> <img src="{{ url('assets/front/images/about-info-box/2.jpg') }}" alt="About Us"/>
             <div class="img-caption">
               <div class="box-holder"></div>
             </div>
@@ -333,7 +342,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
           <div class="mytextes">
             <p>Cargo Movers Canada started as a local business and now we are growing as one of the leading moving companies in Calgary. Our mission is to provide our services with professionalism, attention to each and every specific detail, and concern for the safety of our customer’s properties and belongings.</p>
             <p>
-              At the end of the sentence, you can write : " Cargo movers understands that moving can be hard, expensive and stressful. Thats why we take the initative to ensure you dont experience the negative aspects of relocation. We offer competitive prices and 0% fuel surcharge. We ensure our communication with our customers are clear and done in a timely manner so our customers are confident their move is in good hands. Allowing Cargo Movers to handle your relocation means you dont have to move a muscle. All services are inclusive of the price you are quoted.
+               Cargo movers understands that moving can be hard, expensive and stressful. Thats why we take the initative to ensure you dont experience the negative aspects of relocation. We offer competitive prices and 0% fuel surcharge. We ensure our communication with our customers are clear and done in a timely manner so our customers are confident their move is in good hands. Allowing Cargo Movers to handle your relocation means you dont have to move a muscle. All services are inclusive of the price you are quoted.
             </p>
            <!--  <ul>
               <li>Deliver Environmentally Responsible Client Services</li>
@@ -361,7 +370,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       @if($value->id == $v->p_id)
       <div class="col-md-6">
         <div class="welcome-single-services">
-          <div class="img-box"><a href="{{ route('l',['list'=>$value->slug,'catlist'=>$v->slug])}}"><img src="{{ url($v->image) }}" alt=""></a> </div>
+          <div class="img-box hidden-xs"><a href="{{ route('l',['list'=>$value->slug,'catlist'=>$v->slug])}}"><img src="{{ url($v->image) }}" alt=""></a> </div>
           <div class="text-box">
             <div class="content"> <a href="{{ route('l',['list'=>$value->slug,'catlist'=>$v->slug])}}">
               <h3>{{ $v->category_name }}</h3>
@@ -390,10 +399,27 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
           <a href="{{ url('l/services') }}" class="thm-btn">View services <i class="fa fa-arrow-circle-right"></i></a> </div>
       </div>
     </div>
+	
   </div>
 </section>
 <section class="faq-section sec-padding">
-  <div class="thm-container">
+<div class="thm-container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12"> 
+<p style="text-align: center;"><strong>The one-stop destination for all your moving, packing and storing needs.</strong><br>
+ Let us take the load of moving from your hands, as with us you don’t have to move a muscle. <br>
+
+argomoverscanada is one of the best commercial moving company in Canada. We pick your goods up from where you want and deliver them to your unloading destination. <br>
+
+Begun with being a moving company of Calgary, we have grown throughout the years and now deliver the best professional services in Canada, Winnipeg Vancouver, and Edmonton.  Not only this, but we also work to serve all your residential and commercial needs, for packing, moving, and storing your goods. Our priority is to take care of your goods and provide the utmost safety, and you a painless, stressfree, moving experience. <br>
+
+Enjoy the benefits of working with us! Best Quality services at affordable prices. Moving goods should not be a luxurious affair, but an affordable one. We make sure to deliver your goods on time and in one piece. At Cargomoverscanada we use the best equipment and excellent packaging materials. It helps in keeping your goods protected and safe from any externalities. <br>
+
+For Global Shipping of Cargo, get a quote and let your biggest issue solve, without moving a muscle.</p>
+  </div>
+    </div>
+	  </div>
+  <!-- <div class="thm-container">
     <div class="row">
       <div class="col-lg-12 col-md-12">
         <div class="sec-title">
@@ -455,7 +481,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
      <!--  <div class="col-lg-4 col-md-4">
         <div class="sec-title">
           <h2><span>Our locations</span></h2>
@@ -502,7 +528,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
             <h2><span>GET IN TOUCH</span></h2>
           </div>
 
-          <form action="{{ url('contact/save') }}" method="post" class="contact-form">
+          <form id="contact_form" action="{{ url('contact/save') }}" method="post" class="contact-form">
             <div class="row">
               <div class="col-lg-12 form-group">
                 @if(session()->has('success_message'))
@@ -517,20 +543,9 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
               {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
             </div>
             <div class="form-grp full">
-              <input type="text" name="email" placeholder="Email*" value="{{ (old('email')) ? old('email') : '' }}">
+              <input type="text" name="email" placeholder="Email" value="{{ (old('email')) ? old('email') : '' }}">
               {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
             </div>
-            <!-- <div class="form-grp"> -->
-              <!-- <div class="form-grp half">
-                <select class="select-menu" name="selectMenu">
-                  <option value="default">Choose Something...</option>
-                  <option value="Ware Housing">Ware Housing</option>
-                  <option value="Ware Housing">Ware Housing</option>
-                  <option value="Ware Housing">Ware Housing</option>
-                  <option value="Ware Housing">Ware Housing</option>
-                  <option value="Ware Housing">Ware Housing</option>
-                </select>
-              </div> -->
               <div class="form-grp full">
                 <input type="text" name="subject" placeholder="Subject" value="{{ (old('subject')) ? old('subject') : '' }}">
                  {!! $errors->first('subject', '<p class="help-block">:message</p>') !!}
@@ -540,6 +555,11 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
               <textarea name="message" placeholder="Message">{{ (old('subject')) ? old('subject') : '' }}</textarea>
                {!! $errors->first('message', '<p class="help-block">:message</p>') !!}
             </div>
+            <div class="form-grp">
+                <div class="g-recaptcha-contact" data-sitekey="6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz" id="RecaptchaField1"></div>
+                <input type="hidden" class="hiddenRecaptcha" name="hiddenRecaptcha1" id="hiddenRecaptcha1">
+               <div class="recaptcha-error"></div>
+            </div>
             <button type="submit" class="thm-btn">Submit Now <i class="fa fa-arrow-circle-right"></i></button>
           </form>
         </div>
@@ -547,145 +567,6 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     </div>
   </div>
 </section>
-<!-- <section class="team-section sec-padding">
-  <div class="thm-container">
-    <div class="sec-title">
-      <h2><span>our team members</span></h2>
-    </div>
-    <div class="row">
-      <div class="col-md-3 col-sm-6">
-        <div class="single-team-member img-cap-effect">
-          <div class="img-box"> <img src="http://demo.edtech.in/cargomoverscanada/uploads/image/79881.jpg" alt="Awesome Image"/>
-            <div class="img-caption">
-              <div class="box-holder">
-                <ul>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <div class="name-box">
-              <h3>Jenefir White</h3>
-              <span> Supervisor </span> </div>
-            <p>Lorem ipsum dolor sit ametetd consectetur adipiscing elit.</p>
-          </div>
-          <a href="#" class="readmore">CONTACT ME <i class="fa fa-long-arrow-right"></i></a> </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="single-team-member img-cap-effect">
-          <div class="img-box"> <img src="http://demo.edtech.in/cargomoverscanada/uploads/image/46982.jpg" alt="Awesome Image"/>
-            <div class="img-caption">
-              <div class="box-holder">
-                <ul>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <div class="name-box">
-              <h3>Jenefir White</h3>
-              <span> Supervisor </span> </div>
-            <p>Lorem ipsum dolor sit ametetd consectetur adipiscing elit.</p>
-          </div>
-          <a href="#" class="readmore">CONTACT ME <i class="fa fa-long-arrow-right"></i></a> </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="single-team-member img-cap-effect">
-          <div class="img-box"> <img src="http://demo.edtech.in/cargomoverscanada/uploads/image/94283.jpg" alt="Awesome Image"/>
-            <div class="img-caption">
-              <div class="box-holder">
-                <ul>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <div class="name-box">
-              <h3>Jenefir White</h3>
-              <span> Supervisor </span> </div>
-            <p>Lorem ipsum dolor sit ametetd consectetur adipiscing elit.</p>
-          </div>
-          <a href="#" class="readmore">CONTACT ME <i class="fa fa-long-arrow-right"></i></a> </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="single-team-member img-cap-effect">
-          <div class="img-box"> <img src="http://demo.edtech.in/cargomoverscanada/uploads/image/95834.jpg" alt="Awesome Image"/>
-            <div class="img-caption">
-              <div class="box-holder">
-                <ul>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <div class="name-box">
-              <h3>Jenefir White</h3>
-              <span> Supervisor </span> </div>
-            <p>Lorem ipsum dolor sit ametetd consectetur adipiscing elit.</p>
-          </div>
-          <a href="#" class="readmore">CONTACT ME <i class="fa fa-long-arrow-right"></i></a> </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- <section class="fact-counter sec-padding">
-  <div class="thm-container">
-    <div class="row">
-      <div class="col-md-3 col-sm-6">
-        <div class="single-fact-counter">
-          <div class="icon-box"> <i class="icon icon-User"></i> </div>
-          <div class="text-box">
-            <h4 class="timer" data-from="0" data-to="250"></h4>
-            <p>Emploies in Team</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="single-fact-counter">
-          <div class="icon-box"> <i class="icon icon-BigTruck"></i> </div>
-          <div class="text-box">
-            <h4 class="timer" data-from="0" data-to="106"></h4>
-            <p>Company Vihicles</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="single-fact-counter">
-          <div class="icon-box"> <i class="icon icon-WorldGlobe"></i> </div>
-          <div class="text-box">
-            <h4 class="timer" data-from="0" data-to="406"></h4>
-            <p>Worldwide Clients</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="single-fact-counter">
-          <div class="icon-box"> <i class="icon icon-Briefcase"></i> </div>
-          <div class="text-box">
-            <h4 class="timer" data-from="0" data-to="308"></h4>
-            <p>Projects Done</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 <section class="latest-blog sec-padding">
   <div class="thm-container">
     <div class="sec-title">
@@ -759,6 +640,12 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
 .mainwraperab{
   top: 70% !important;
 }
+
+@media screen and (max-width: 768px){
+  .mainwraperab{
+    top: 55% !important;
+  }
+}
 #msform .radio label input[type='radio']:checked+span {
     border-radius: 11px;
     width: 10px;
@@ -769,15 +656,40 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     display: block;
     background-color: #880b17;
 }
+
+@media screen and (max-width: 425px){
+  #msform .radio label input[type='radio']:checked+span {
+    left: 5px;
+  }
+}
+
+
+.help-block{
+  color: red;
+}
+.recaptcha-error{
+  color: red; 
+  }
 </style>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="{{ url('assets/css/jquery-ui.min.css') }}">
 @endsection
 @section('script')
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.js" type="text/javascript"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="{{ url('assets/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 <script src="{{ url('assets/js/jquery-input-mask-phone-number.min.js') }}"></script>
 <script type="text/javascript">
   $(function(){
+    if($(window).width() <= 800){
+       $( "#datepicker" ).datepicker('destroy');
+       $( "#datepicker" ).datepicker({
+          minDate: 0,
+          onSelect: function(dateText, inst) {
+            $("#move_date").val(dateText);
+            var elem = $('#move_date');
+             next_func(elem);
+          }
+        });
+    }
+
      $('#msform input[name="phone"]').usPhoneFormat({
         format: 'xxx-xxx-xxxx',
     }); 
@@ -906,7 +818,15 @@ $('body').on('click', '.request_submit_btn', function(e){
       }
     });
     if (form1.valid() == true){
-      $('#msform').submit();
+
+      var hiddenRecaptchaV =  $('#hiddenRecaptcha').val();
+      if (hiddenRecaptchaV.length  == 0) {
+        e.preventDefault();
+        $('#msform').find('.recaptcha-error').text('please verify you are humann!');
+        return false;
+      }else{
+        $('#msform').submit();
+      }
     }
 
 });
@@ -967,22 +887,54 @@ $(".previous").click(function(){
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSlhXQ8ixpBW6CLmCJWOIvQXmwzXwlbj4&v=3.exp&sensor=false&libraries=places"></script>
 <script type="text/javascript" src="{{ asset('assets/front/autocomplete.js') }}"></script>
+
+
+  <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit"
+        async defer>
+    </script>
+ <script type="text/javascript">
+    var CaptchaCallback = function() {
+        var widgetId;
+        var widgetId1;
+        widgetId = grecaptcha.render('RecaptchaField', {'sitekey' : '6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz', 'callback' : correctCaptcha});
+        widgetId1 = grecaptcha.render('RecaptchaField1', {'sitekey' : '6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz', 'callback' : correctCaptcha1});
+    };
+    var correctCaptcha = function(response) {
+        $("#hiddenRecaptcha").val(response);
+    };
+    var correctCaptcha1 = function(response) {
+        $("#hiddenRecaptcha1").val(response);
+    };
+
+
+    $('body').on('submit', '#contact_form', function(e){
+      var hiddenRecaptchaV =  $('#hiddenRecaptcha1').val();
+      if (hiddenRecaptchaV.length  == 0) {
+        e.preventDefault();
+        $('#contact_form').find('.recaptcha-error').text('please verify you are humann!');
+        return false;
+      }
+
+    })
+</script>
+ 
 <script type="text/javascript">
-  var option = '';
+  var fromOption = '';
+  var toOption = '';
   $(function(){
 
-        var option = $("#from_location").geocomplete({
+        var fromOption = $("#from_location").geocomplete({
             componentRestrictions: {country: "ca"}
         });
 
-        var option = $("#to_location").geocomplete({
+        var toOption = $("#to_location").geocomplete({
             componentRestrictions: {country: "ca"}
         });
 
         $('body').on('change', 'input[name="moving_from"]', function(){
           var country = $(this).val();
           $('#from_location').geocomplete("destroy");
-          var option = $("#from_location").geocomplete({
+          var fromOption = $("#from_location").geocomplete({
               componentRestrictions: {country: country}
           });
         });
@@ -990,13 +942,13 @@ $(".previous").click(function(){
         $('body').on('change', 'input[name="moving_to"]', function(){
           var country = $(this).val();
           $('#to_location').geocomplete("destroy");
-          var option = $("#to_location").geocomplete({
+          var toOption = $("#to_location").geocomplete({
               componentRestrictions: {country: country}
           });
         });
 
 
-        option.bind("geocode:result", function (event, result) {
+        fromOption.bind("geocode:result", function (event, result) {
             var location_arr = {};
             for (var i in result.address_components) {
                 var obj = result.address_components[i];
@@ -1030,7 +982,7 @@ $(".previous").click(function(){
             $("#from_venue_country").val(location_arr.country);
         });
 
-        option.bind("geocode:result", function (event, result) {
+        toOption.bind("geocode:result", function (event, result) {
             var location_arr = {};
             for (var i in result.address_components) {
                 var obj = result.address_components[i];

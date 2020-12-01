@@ -12,16 +12,16 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
           <p>Cargo Movers started as a local business and now we are growing as one of the leading moving companies in Calgary.</p>
           <a href="{{ url('about/about-us') }}">Read More <i class="fa fa-angle-double-right"></i></a>
           <ul class="social">
-            <li><a href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://www.facebook.com/CargoMoversCanada/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/cargomoverscanada/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <!-- <li><a href="" target="_blank"><i class="fa fa-google-plus"></i></a></li> -->
+            <li><a href="mailto:info@cargomoverscanada.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
           </ul>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6 footer-widget">
+      <div class="col-md-3 col-xs-6 footer-widget">
         <div class="pl-30">
-          <div class="title"> <a href="{{ url('/services') }}" >
+          <div class="title"> <a href="{{ url('/l/services') }}" >
             <h3><span> Services </span></h3>
             </a> </div>
           <ul class="link-list">
@@ -31,14 +31,14 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
           </ul>
         </div>
       </div>
-      <div class="col-md-2 col-sm-6 footer-widget">
+      <div class="col-md-2 col-xs-6 footer-widget">
         <div class="title">
           <h3><span>Quick Links</span></h3>
         </div>
         <ul class="link-list">
           <li > <a href="{{ url('/') }}">Home</a> </li>
           <li > <a href="{{ url('about/about-us') }}" > About Us </a> </li>
-          <li > <a href="{{ url('testimonials') }}">Testimonial</a> </li>
+          <!-- <li > <a href="{{ url('testimonials') }}">Testimonial</a> </li> -->
           <li > <a href="{{ url('faqs') }}">Faq</a> </li>
           <li > <a href="{{ url('blogs') }}">blog</a> </li>
           <li><a href="{{ url('contactus') }}">contact us</a></li>
@@ -50,7 +50,7 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
         </div>
         <ul class="contact-infos">
           <li>
-            <div class="icon-box"> <i class="fa fa-map-marker"></i> </div>
+            <div class="icon-box"> <a href="https://goo.gl/maps/HV4AyWvnxF6JrZkU8" target="_blank"><i class="fa fa-map-marker"></i> </a></div>
             <div class="text-box">
               <p><b>Cargo Movers Canada</b> <br>
                 683 10 St SW #208, Calgary, AB T2P 5G3, Canada</p>
@@ -59,13 +59,13 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
           <li>
             <div class="icon-box"> <i class="fa fa-phone"></i> </div>
             <div class="text-box">
-              <p> (403) 768-0480 / 1-855-206-9407</p>
+              <p> <a href="tel:(403) 768-0480">(403) 768-0480</a> / <a href="tel:1-855-206-9407">1-855-206-9407</a></p>
             </div>
           </li>
           <li>
             <div class="icon-box"> <i class="fa fa-envelope-o"></i> </div>
             <div class="text-box">
-              <p>info@CargoMoversCanada.com</p>
+              <p><a href="mailto:info@CargoMoversCanada.com">info@CargoMoversCanada.com</a></p>
             </div>
           </li>
           <li>
@@ -82,16 +82,16 @@ $subcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=','0
 <section class="bottom-bar">
   <div class="thm-container clearfix">
     <div class="pull-left">
-      <p>Copyright &copy; 2019 Cargo Movers Canada. All Rights Reserved | <a target="_blank" href="{{ url('sitemap') }}">Site Map</a></p>
+      <p>Copyright &copy; 2019-20 Cargo Movers Canada. All Rights Reserved | <a target="_blank" href="{{ url('sitemap') }}">Site Map</a></p>
     </div>
     <div class="pull-right">
-      <p>Created by: Edtech</p>
+      <p> Powered by <a href="https://webdesigncalgary.net/" target="_blank"> WebDesign Calgary </a></p>
     </div>
   </div>
 </section>
 <script src="{{ asset('assets/front/plugins/jquery/jquery-1.11.3.min.js') }}"></script> 
 <script src="{{ asset('assets/front/plugins/bootstrap/js/bootstrap.min.js') }}"></script> 
-<script src="{{ asset('assets/front/plugins/jquery-ui-1.11.4/jquery-ui.js') }}"></script> 
+<script src="{{ asset('assets/front/plugins/jquery-ui-1.11.4/jquery-ui.min.js') }}"></script> 
 <script src="{{ asset('assets/front/plugins/owl.carousel-2/owl.carousel.min.js') }}"></script> 
 <script src="{{ asset('assets/front/plugins/jquery-appear/jquery.appear.js') }}"></script> 
 <script src="{{ asset('assets/front/plugins/jquery-countTo/jquery.countTo.js') }}"></script> 

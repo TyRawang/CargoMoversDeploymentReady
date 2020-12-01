@@ -15,7 +15,7 @@
         <div class="icon-box"> <i class="icon icon-Phone2"></i> </div>
         <div class="text-box">
           <p class="highlighted">Call Us:</p>
-          <p class="phone-number">1-855-206-9407</p>
+          <p class="phone-number"><a href="tel:1-855-206-9407">1-855-206-9407</a></p>
         </div>
       </div>
      <!--  <div class="info-box search-box-wrapper">
@@ -41,8 +41,8 @@
         </div>
         <div class="nav-footer">
           <ul class="nav">
-            <li class="has-submenu"> <a href="{{ route('/') }}">Home</a> </li>
-            <li class="has-submenu"> <a href="{{ route('about',['about'=>'about-us']) }}" > About Us </a> </li>
+            <li> <a href="{{ route('/') }}">Home</a> </li>
+            <li> <a href="{{ route('about',['about'=>'about-us']) }}" > About Us </a> </li>
             @foreach($category as $value)
              <li class="has-submenu"><a href="{{ route('l',['list'=>$value->slug])}}" class="dropdown-trigger" >{{ $value->category_name }} <i class="menu-toggle fa fa-angle-down"></i></a> @if($subcategory)
               <ul class="submenu">
@@ -66,9 +66,9 @@
                     <li><a href="{{ url('storage-services') }}"> Storage</a></li>
               </ul>
             </li> -->
-            <li class="has-submenu"> <a href="{{ route('/') }}/testimonials">Testimonial</a> </li>
-            <li class="has-submenu"> <a href="{{ route('/') }}/faqs">Faq</a> </li>
-            <li class="has-submenu"> <a href="{{ route('/') }}/blogs">blog</a> </li>
+            <!-- <li> <a href="{{ route('/') }}/testimonials">Testimonial</a> </li> -->
+            <li> <a href="{{ route('/') }}/faqs">Faq</a> </li>
+            <li> <a href="{{ route('/') }}/blogs">blog</a> </li>
             <li><a href="{{ route('/') }}/contactus">contact us</a></li>
           </ul>
         </div>
