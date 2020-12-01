@@ -136,7 +136,7 @@ class HomeController extends Controller
         return view('fronts.freequote');
     }
 
-    public function weightCalculator()
+    public function WeightCalculator()
     {
         return view('weight-calculator');
     }
