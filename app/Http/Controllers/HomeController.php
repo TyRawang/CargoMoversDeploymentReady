@@ -82,7 +82,8 @@ class HomeController extends Controller
        
 	     $faqs = HomeFaqss::where('isActive',1)->Orderby('cattype','ASC')->get();
 	   return view('fronts.faqs',compact('faqs'));
-	   
+       
+    
        
     }
 	
@@ -138,7 +139,7 @@ class HomeController extends Controller
 
     public function WeightCalculator()
     {
-        return view('weight-calculator');
+        return view('fronts.weight-calculator');
     }
 	
 	
