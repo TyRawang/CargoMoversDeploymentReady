@@ -9,7 +9,8 @@
         $exitCode = Artisan::call('route:clear');
         });
   //FRONT
-Route::get('/weight-calculator', 'HomeController@weightCalculator')->name('/weight-calculator');
+// Route::get('/weight-calculator', 'HomeController@weightCalculator')->name('/weight-calculator');
+Route::view('/weight-calculator', 'fronts.weight-calculator');
 Route::get('/','HomeController@index')->name('/');
 Route::get('l/{slug}/{slug2?}','HomeController@listCategory')->name('l');
 Route::get('details/{slug1}','HomeController@details')->name('details');
