@@ -66,11 +66,7 @@
                     <li><a href="{{ url('storage-services') }}"> Storage</a></li>
               </ul>
             </li> -->
-<<<<<<< HEAD
-            <!-- <li> <a href="{{ route('/') }}/testimonials">Testimonial</a> </li> -->
-=======
             <li> <a href="{{ route('/') }}/testimonials">Testimonial</a> </li>
->>>>>>> b19b5b547ad4f6ba78630171678ac39ecc16c843
             <li> <a href="{{ route('/') }}/faqs">Faq</a> </li>
             <li> <a href="{{ route('/') }}/blogs">blog</a> </li>
             <li><a href="{{ route('/') }}/contactus">contact us</a></li>
