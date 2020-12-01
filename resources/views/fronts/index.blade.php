@@ -662,6 +662,7 @@ For Global Shipping of Cargo, get a quote and let your biggest issue solve, with
     left: 5px;
   }
 }
+<<<<<<< HEAD
 
 
 .help-block{
@@ -670,6 +671,8 @@ For Global Shipping of Cargo, get a quote and let your biggest issue solve, with
 .recaptcha-error{
   color: red; 
   }
+=======
+>>>>>>> b19b5b547ad4f6ba78630171678ac39ecc16c843
 </style>
 <link rel="stylesheet" href="{{ url('assets/css/jquery-ui.min.css') }}">
 @endsection

@@ -350,10 +350,13 @@ We aim to respond to all quote requests within a 24 hour period Monday-Friday. H
     background-color: #880b17;
 }
 
+<<<<<<< HEAD
 .recaptcha-error{
   color: red;
 }
 
+=======
+>>>>>>> b19b5b547ad4f6ba78630171678ac39ecc16c843
 @media screen and (max-width: 425px){
   #msform .radio label input[type='radio']:checked+span {
     left: 5px;
