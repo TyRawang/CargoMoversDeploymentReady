@@ -278,8 +278,10 @@ class HomeController extends Controller
         $v = \Validator::make($input, $rules, $messages);
         $v->setAttributeNames($newnames);
         if ($v->passes()) {
-            // $this->sendmail($input);
+            $this->sendmail($input);
             $this->sendfreequotemailadmin($input);
+            // $this->sendmailadmin($input);
+
             $message = "Saved successfully";
             return redirect()->back()->with('quote_success_message', $message);
         } else {
@@ -287,9 +289,6 @@ class HomeController extends Controller
         }
         return json_encode($json);
     }
-
-
-
 
     public function sendmail($input){
         $input = \Request::all();
@@ -301,21 +300,22 @@ class HomeController extends Controller
     }
 
 
-    public function sendmailadmin($input){
+    public function sendmailadmin($input) {
         $input = \Request::all();
         $mailObj = new MailFunctions();
         $mailObj->auto = true;
         $mailObj->subject = sprintf("Contact us");
         $mailObj->toEmail = "info@cargomoverscanada.com";
         $html = $mailObj->sendmail("emails.contactus_for_admin", ['title' => "Contact us", 'input' => $input]);
+    
     }
 
-    public function sendfreequotemailadmin($input){
+    public function sendfreequotemailadmin($input) {
         $input = \Request::all();
         $mailObj = new MailFunctions();
-        $mailObj->auto = true;
+        $mailObj->auto = true;  
         $mailObj->subject = sprintf("Get Free Quote");
         $mailObj->toEmail = "info@cargomoverscanada.com";
-        $html = $mailObj->sendmail("emails.get_free_quote_for_admin", ['title' => "Contact us", 'input' => $input]);
+        $html = $mailObj->sendmail("emails.get_free_quote_for_admin", ['title' => "Get Free Quote", 'input' => $input]);
     }
 }

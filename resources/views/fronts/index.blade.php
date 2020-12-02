@@ -664,8 +664,6 @@ For Global Shipping of Cargo, get a quote and let your biggest issue solve, with
     left: 5px;
   }
 }
-<<<<<<< HEAD
-
 
 .help-block{
   color: red;
@@ -673,8 +671,6 @@ For Global Shipping of Cargo, get a quote and let your biggest issue solve, with
 .recaptcha-error{
   color: red; 
   }
-=======
->>>>>>> b19b5b547ad4f6ba78630171678ac39ecc16c843
 </style>
 <link rel="stylesheet" href="{{ url('assets/css/jquery-ui.min.css') }}">
 @endsection
@@ -822,16 +818,20 @@ $('body').on('click', '.request_submit_btn', function(e){
         },
       }
     });
+    
     if (form1.valid() == true){
+      
+      $('#msform').submit();
+      //commented recaptcha 
 
-      var hiddenRecaptchaV =  $('#hiddenRecaptcha').val();
-      if (hiddenRecaptchaV.length  == 0) {
-        e.preventDefault();
-        $('#msform').find('.recaptcha-error').text('please verify you are humann!');
-        return false;
-      }else{
-        $('#msform').submit();
-      }
+      // var hiddenRecaptchaV =  $('#hiddenRecaptcha').val();
+      // if (hiddenRecaptchaV.length  == 0) {
+      //   e.preventDefault();
+      //   $('#msform').find('.recaptcha-error').text('please verify you are humann!');
+      //   return false;
+      // }else{
+      //   $('#msform').submit();
+      // }
     }
 
 });
@@ -898,29 +898,30 @@ $(".previous").click(function(){
         async defer>
     </script>
  <script type="text/javascript">
-    var CaptchaCallback = function() {
-        var widgetId;
-        var widgetId1;
-        widgetId = grecaptcha.render('RecaptchaField', {'sitekey' : '6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz', 'callback' : correctCaptcha});
-        widgetId1 = grecaptcha.render('RecaptchaField1', {'sitekey' : '6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz', 'callback' : correctCaptcha1});
-    };
-    var correctCaptcha = function(response) {
-        $("#hiddenRecaptcha").val(response);
-    };
-    var correctCaptcha1 = function(response) {
-        $("#hiddenRecaptcha1").val(response);
-    };
+  // Commented Recaptcha 
+    // var CaptchaCallback = function() {
+    //     var widgetId;
+    //     var widgetId1;
+    //     widgetId = grecaptcha.render('RecaptchaField', {'sitekey' : '6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz', 'callback' : correctCaptcha});
+    //     widgetId1 = grecaptcha.render('RecaptchaField1', {'sitekey' : '6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz', 'callback' : correctCaptcha1});
+    // };
+    // var correctCaptcha = function(response) {
+    //     $("#hiddenRecaptcha").val(response);
+    // };
+    // var correctCaptcha1 = function(response) {
+    //     $("#hiddenRecaptcha1").val(response);
+    // };
 
 
-    $('body').on('submit', '#contact_form', function(e){
-      var hiddenRecaptchaV =  $('#hiddenRecaptcha1').val();
-      if (hiddenRecaptchaV.length  == 0) {
-        e.preventDefault();
-        $('#contact_form').find('.recaptcha-error').text('please verify you are humann!');
-        return false;
-      }
+    // $('body').on('submit', '#contact_form', function(e){
+    //   var hiddenRecaptchaV =  $('#hiddenRecaptcha1').val();
+    //   if (hiddenRecaptchaV.length  == 0) {
+    //     e.preventDefault();
+    //     $('#contact_form').find('.recaptcha-error').text('please verify you are humann!');
+    //     return false;
+    //   }
 
-    })
+    // })
 </script>
  
 <script type="text/javascript">
