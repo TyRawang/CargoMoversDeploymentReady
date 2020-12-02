@@ -82,10 +82,10 @@ Send Us A Quick Email"/>
             <textarea name="message" placeholder="Message"> {{ (old('message')) ? old('message') : '' }}</textarea>
             {!! $errors->first('message', '<p class="help-block">:message</p>') !!}
           </p>
-          <p>
+          <!-- <p>
             <div id="gogle-recaptch"></div>
             <div class="recaptcha-error"></div>
-          </p>
+          </p> -->
 
           <button type="submit" class="thm-btn">Submit Now <i class="fa fa-arrow-right"></i></button>
         </form>
@@ -137,7 +137,10 @@ Send Us A Quick Email"/>
  <script type="text/javascript">
       var onloadCallback = function() {
         grecaptcha.render('gogle-recaptch', {
-          'sitekey' : '6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz'
+          // 6Lcf5_UZAAAAAJszjZtEZN691kXyBN2oKgcU98Ak
+          // 'sitekey' : '6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz'
+          'sitekey' : '6Lcf5_UZAAAAAJszjZtEZN691kXyBN2oKgcU98Ak'
+
         });
       };
 
