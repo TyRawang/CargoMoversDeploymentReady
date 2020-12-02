@@ -686,24 +686,24 @@ text-decoration: none;
               </div>
 
               <div class="container summery-container" v-show="displaySummery === true">
-                <p>Thank you, <b>Someone!</b></p>
-                <p>Your home inventory information has been successfully received. An email with the details has been sent to <b>someone@somedomain.com</b></p>
+                <p>Thank you</p>
+                <p>Your inventory list is here with the estimated weight. If you are looking for Moving, Packing and/or Storage services please contact us <b>info@cargomoverscanada.com</b></p>
                 <div class="summery-inventory">
                   <div class="row">
                     <h3>MOVE DETAILS</h3>
                     <div class="moving-from-to">
                       <div class="map-area"></div>
                       <div class="address-area">
-                        <p><strong>Moving From:</strong> Some Place</p>
-                        <p><strong>Moving To:</strong> Some Other Place</p>
-                        <p><strong>Approx. Distance:</strong> Unknown</p>
-                        <p><strong>Move Date:</strong> Unknown</p>
+                        <p><strong>Moving From:</strong> ________________ </p>
+                        <p><strong>Moving To:</strong> ________________ </p>
+                        <p><strong>Approx. Distance:</strong> ________________</p>
+                        <p><strong>Move Date:</strong> ________________</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="row total-summery">
-                    <h3>SUMMERY</h3>
+                    <h3>SUMMARY</h3>
                     <div class="total-summery-line">
                       <p><strong>Total Items: </strong> {{calculationList.length}}</p>
                       <p><strong>Total Weight: </strong>{{ getTotalCalculatedWeight }} lbs</p>
@@ -737,16 +737,8 @@ text-decoration: none;
                     </div>
                     <div class="row">
                       <div class="faq-terms">
-                        <p>In the meantime, take a closer look at the special selection of super-useful and extremely practical articles below to get 100% ready for your upcoming move. Enjoy!</p>
-                        <ul>
-                          <li><a href="#">How to make a moving budget</a></li>
-                          <li><a href="#">Packing checklist: How to pack for a move in 60 steps</a></li>
-                          <li><a href="#">How to get rid of unwanted items when moving house</a></li>
-                          <li><a href="#">8 Tips for moving on a tight budget</a></li>
-                          <li><a href="#">12 Things to do before moving into a new home</a></li>
-                          <li><a href="#">21 Things to do after moving into a new home</a></li>
-                          <li><a href="#">20 Funny moving tips to simplify your move</a></li>
-                        </ul>
+                        <p>In the meantime, take a look at our blogs <b>cargomoverscanada.com/blogs</b>. Enjoy!</p>
+                        
                       </div>
                     </div>
                   </div>
