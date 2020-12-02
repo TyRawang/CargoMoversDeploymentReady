@@ -306,7 +306,9 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       <div class="row">
         <div class="col-md-4"></div>
        <div class="col-md-4">
-          <div class="g-recaptcha-contact" data-sitekey="6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz" id="RecaptchaField"></div>
+       <!-- 6Lcf5_UZAAAAAJszjZtEZN691kXyBN2oKgcU98Ak -->
+          <!-- <div class="g-recaptcha-contact" data-sitekey="6LfibNYUAAAAAKE7KLMn8qe9dyAn9Ub3v6I-xisz" id="RecaptchaField"></div> -->
+          <div class="g-recaptcha-contact" data-sitekey="6Lcf5_UZAAAAAJszjZtEZN691kXyBN2oKgcU98Ak" id="RecaptchaField"></div>
           <input type="hidden" class="hiddenRecaptcha" name="hiddenRecaptcha" id="hiddenRecaptcha">
            <div class="recaptcha-error"></div>
        </div>
