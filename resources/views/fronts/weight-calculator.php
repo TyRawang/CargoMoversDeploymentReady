@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://cargo.webdesigncalgary.net/assets/css/jquery-ui.min.css">
   
   <style type="text/css">
-  /* <style type="text/css"> */
 #root {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -591,10 +590,10 @@ text-decoration: none;
 .icon-213 {background-position: 0 -9568px}
 .icon-214 {background-position: 0 -9614px}
 .icon-215 {background-position: 0 -9660px}
-/* </style> */
-  </style>
+</style>
   <!-- End of STYLE 
-==============================================================================================================-->
+==============================================================================================================
+-->
 
 
 </head>
