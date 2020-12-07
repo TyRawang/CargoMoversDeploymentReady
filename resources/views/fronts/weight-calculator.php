@@ -6,9 +6,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
     crossorigin="anonymous" />
-  <!-- <link rel="stylesheet" href="https://cargo.webdesigncalgary.net/assets/weight-calculator/weight-calculator.css"> -->
-  <link rel="stylesheet" href="https://cargo.webdesigncalgary.net/assets/weight-calculator/fonts/icon-fonts/flaticon.css">
-  <link rel="stylesheet" href="https://cargo.webdesigncalgary.net/assets/css/jquery-ui.min.css">
+  <!-- <link rel="stylesheet" href="https://cargomoverscanada.com/assets/weight-calculator/weight-calculator.css"> -->
+  <link rel="stylesheet" href="https://cargomoverscanada.com/assets/weight-calculator/fonts/icon-fonts/flaticon.css">
+  <link rel="stylesheet" href="https://cargomoverscanada.com/assets/css/jquery-ui.min.css">
   
   <style type="text/css">
 #root {
@@ -177,7 +177,7 @@ height: 46px;
 margin: .5rem;
 border: 1px solid black;
 border-radius: 5px;
-background: url("https://cargo.webdesigncalgary.net/assets/weight-calculator/sprite.gif");
+background: url("https://cargomoverscanada.com/assets/weight-calculator/sprite.gif");
 cursor: pointer;
 }
 
@@ -188,7 +188,7 @@ height: 46px;
 margin: .5rem;
 border: 1px solid black;
 border-radius: 5px;
-background: url("https://cargo.webdesigncalgary.net/assets/weight-calculator/sprite.gif");
+background: url("https://cargomoverscanada.com/assets/weight-calculator/sprite.gif");
 cursor: pointer;
 }
 
@@ -288,7 +288,7 @@ margin-bottom: 20px;
 }
 
 .map-area {
-background: url("https://cargo.webdesigncalgary.net/assets/weight-calculator/map.jpeg") center no-repeat;
+background: url("https://cargomoverscanada.com/assets/weight-calculator/map.jpeg") center no-repeat;
 background-size: cover;
 width: 49%;
 height: 150px;
@@ -337,7 +337,7 @@ width: 46px;
 height: 46px;
 border: 1px solid black;
 border-radius: 5px;
-background: url("https://cargo.webdesigncalgary.net/assets/weight-calculator/sprite.gif") no-repeat;
+background: url("https://cargomoverscanada.com/assets/weight-calculator/sprite.gif") no-repeat;
 }
 
 .summery-item-detail {
