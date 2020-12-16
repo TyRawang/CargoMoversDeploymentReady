@@ -9,7 +9,7 @@ $userlogin = Auth::User();
 @endphp
 
 @section('meta')
-<title>Cargo Movers | Moving Services in Vancouver Canada</title>
+<title>Cargo Movers | Moving Services in Vancouver Canada ---</title>
 
 <!-- This site is optimized with the Yoast SEO plugin v12.4 - https://yoast.com/wordpress/plugins/seo/ -->
 <meta name="description" content="{!! $shortdescription !!}"/>
