@@ -40,7 +40,7 @@ Barry Tim
         <h4 class="hdng-title">Company Info</h4>
         <ul class="site_map_items">
           <li><a href="{{ url('/') }}">Home </a></li>
-          <li><a href="{{ url('services') }}">Services </a></li>
+          <li><a href="{{ url('/l/services') }}">Services </a></li>
           <li><a href="{{ url('/testimonials') }}">Testimonials </a></li>
           <li><a href="{{ url('/faqs') }}">FAQ's </a></li>
           <li><a href="{{ url('/about/about-us') }}">About us </a></li>
