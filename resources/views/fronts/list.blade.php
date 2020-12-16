@@ -9,35 +9,40 @@ $userlogin = Auth::User();
 @endphp
 
 @section('meta')
-<title>Cargo Movers | Moving Services in Vancouver Canada ---</title>
-
 <!-- This site is optimized with the Yoast SEO plugin v12.4 - https://yoast.com/wordpress/plugins/seo/ -->
-<meta name="description" content="{!! $shortdescription !!}"/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 
 <?php
 if(strtolower($currentURL)=='https://cargomoverscanada.com/l/moving' || strtolower($currentURL)=='https://cargomoverscanada.com/l/services/moving'){
 	$alt = "Long distance movers Calgary";
 	?>
+<title>Cargo Movers | Moving Services in Vancouver Canada - Long Distance Movers - Office Movers</title>
+<meta name="description" content="{!! $shortdescription !!}"/>
     <link rel="canonical" href="https://cargomoverscanada.com/l/services/moving" />
     <?php
 }
 elseif(strtolower($currentURL)=='https://cargomoverscanada.com/l/packing' || strtolower($currentURL)=='https://cargomoverscanada.com/l/services/packing'){
 	$alt = "home packing services Calgary";
 	?>
+<title>Cargo Movers | Moving Services in Vancouver Canada - Home Packing Services - Packers Services in Winnipeg</title>
+<meta name="description" content="{!! $shortdescription !!}"/>
     <link rel="canonical" href="https://cargomoverscanada.com/l/services/packing" />
     <?php
 }
 elseif(strtolower($currentURL)=='https://cargomoverscanada.com/l/storage' || strtolower($currentURL)=='https://cargomoverscanada.com/l/services/packing'){
 	$alt = "";
 	?>
+<title>Cargo Movers | Moving Services in Vancouver Canada</title>
+<meta name="description" content="{!! $shortdescription !!}"/>
     <link rel="canonical" href="https://cargomoverscanada.com/l/services/storage" />
     <?php
 }
 else{
 	$alt = "";
 	?>
-    <link rel="canonical" href="{{ \Request::fullUrl() }}" />
+<title>Cargo Movers | Moving Services in Vancouver Canada</title>
+<meta name="description" content="{!! $shortdescription !!}"/>
+<link rel="canonical" href="{{ \Request::fullUrl() }}" />
     <?php
 }
 ?>
