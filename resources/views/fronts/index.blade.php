@@ -582,7 +582,7 @@ For Global Shipping of Cargo, get a quote and let your biggest issue solve, with
             <div class="img-caption">
               <div class="box-holder">
                 <ul>
-                  <li><a href="h{{ route('blog-detail',['slug'=>$val->slug])}}"><i class="fa fa-link"></i></a></li>
+                  <li><a href="{{ route('blog-detail',['slug'=>$val->slug])}}"><i class="fa fa-link"></i></a></li>
                 </ul>
               </div>
             </div>
