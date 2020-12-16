@@ -5,7 +5,7 @@
 <title>Cargo Movers Residential and Commercial Moving Company in Canada</title>
 <meta name="description" content="Cargo Movers Canada one of the best professional and reliable packing, moving and storage company. we provides all services at affordable prices."/>
 <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
-<link rel="canonical" href="{{ \Request::fullUrl() }}" />
+<link rel="canonical" href="https://cargomoverscanada.com" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Cargo Movers Residential and Commercial Moving Company in Canada" />
