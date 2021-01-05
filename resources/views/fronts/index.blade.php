@@ -116,7 +116,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
 
       <label>
         <input type="radio" name="property_type" value="Apartment" class="styles-inp property-type-cls">
-        <img src="{{ url('UserImage/apartment.png') }}" style="width: 200px; padding:20% 20% 5% 20%;">
+        <img src="{{ url('UserImage/apartment.png') }}" alt="apartment" style="width: 200px; padding:20% 20% 5% 20%;">
         <p>Apartment</p>
       </label>
     </div>
