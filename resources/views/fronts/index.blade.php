@@ -123,7 +123,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
     <div class="col-lg-4 col-xs-12">
       <label>
         <input type="radio" name="property_type" value="Commercial" class="styles-inp property-type-cls">
-        <img src="{{ url('UserImage/business-building.png') }}" style="width: 200px; padding:20% 20% 5% 20%;">
+        <img src="{{ url('UserImage/business-building.png') }}" alt="business building"style="width: 200px; padding:20% 20% 5% 20%;">
         <p>Commercial</p>
       </label>
     </div>
@@ -372,7 +372,7 @@ $homesubcategory = App\Category::Orderby('order_by_cat','ASC')->where('p_id','!=
       @if($value->id == $v->p_id)
       <div class="col-md-6">
         <div class="welcome-single-services">
-          <div class="img-box hidden-xs"><a href="{{ route('l',['list'=>$value->slug,'catlist'=>$v->slug])}}"><img src="{{ url($v->image) }}" alt=""></a> </div>
+          <div class="img-box hidden-xs"><a href="{{ route('l',['list'=>$value->slug,'catlist'=>$v->slug])}}"><img src="{{ url($v->image) }}" alt="commercial moving company Canada"></a> </div>
           <div class="text-box">
             <div class="content"> <a href="{{ route('l',['list'=>$value->slug,'catlist'=>$v->slug])}}">
               <h3>{{ $v->category_name }}</h3>
